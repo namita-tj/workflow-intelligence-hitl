@@ -58,39 +58,24 @@ def fallback_explanation(finding: dict) -> str:
 def normalize_finding(raw_finding: dict) -> dict:
     """
     Convert either detector's raw output to a common internal finding format.
-    Rule breaches and anomalies have different schemas — normalize to one.
 
-    Parameters
-    ----------
-    raw_finding : dict
-        Either:
-        - Rule breach: {teammate_id, metric, value, benchmark, breached}
-        - Anomaly: {teammate_id, cluster_label, is_noise}
-
-    Returns
-    -------
-    dict
-        Common format:
-        {
-            'teammate_id': str,
-            'finding_type': 'rule_breach' or 'anomaly',
-            'metric': str or None,
-            'value': float or None,
-            'benchmark': float or None,
-            'cluster_label': int or None,
-            'is_noise': bool or None,
-        }
+    Idempotent: if raw_finding is already normalized (has a valid finding_type),
+    returns it unchanged rather than re-deriving from scratch. This prevents
+    double-normalization from corrupting data — see the anomaly-finding bug
+    found during live end-to-end testing (2026-08-17), where re-normalizing
+    an already-normalized anomaly finding misclassified it as rule_breach
+    because the 'metric' key was present (set to None) even though anomaly
+    findings don't use it.
     """
+    if raw_finding.get("finding_type") in ("rule_breach", "anomaly"):
+        return dict(raw_finding)  # shallow copy, don't mutate caller's dict
+
     normalized = {
         "teammate_id": raw_finding.get("teammate_id"),
-        "metric": None,
-        "value": None,
-        "benchmark": None,
-        "cluster_label": None,
-        "is_noise": None,
+        "metric": None, "value": None, "benchmark": None,
+        "cluster_label": None, "is_noise": None,
     }
 
-    # Detect schema: rule_breach has 'metric', anomaly has 'cluster_label'
     if "metric" in raw_finding:
         normalized["finding_type"] = "rule_breach"
         normalized["metric"] = raw_finding.get("metric")
@@ -104,7 +89,6 @@ def normalize_finding(raw_finding: dict) -> dict:
         raise ValueError(f"Unrecognized finding schema: {raw_finding}")
 
     return normalized
-
 
 # ============================================================================
 # 3. Prompt builder — constrained generation
@@ -284,7 +268,7 @@ def validate_response(
 ) -> bool:
     """
     Validate that the LLM response actually mentions the real metric/value.
-    
+
     KNOWN LIMITATION (observed 2026-08, live integration test against T-023):
     This only checks that the correct factual content is present — it does NOT
     detect whether the model also violated the prompt's other constraint
