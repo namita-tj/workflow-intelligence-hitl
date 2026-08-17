@@ -20,7 +20,7 @@ See `docs/Methodology.md` for full scope, rationale, and methodology.
 
 ```
 notebooks/   Analysis notebooks (correlation, EDA, clustering)
-hitl/        Q2 pipeline components — detectors, tested Python modules
+hitl/        Q2 pipeline components — detectors, explanation layer, review, ledger
 tests/       pytest suites for hitl/ components
 docs/        Methodology and project notes
 data/        Processed/derived data only — see note below
@@ -43,25 +43,25 @@ jupyter notebook
 
 ## Status
 
-| Area                                                    | Status                                                                                                                                                   |
-| ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Data collection, cleaning, EDA                          | ~95%                                                                                                                                                     |
-| Correlation analysis                                    | ~95%                                                                                                                                                     |
-| Clustering (Q1)                                         | ~85% — stability check confirmed on external validation data, not yet on this project's own core data                                                    |
-| RF feasibility demo                                     | ~90%                                                                                                                                                     |
-| External validation (independent ground-truth datasets) | ~90% — strong result, not yet written up as a clean notebook                                                                                             |
-| **HITL pipeline (Q2)**                                  | **~80% — rule-based detector, anomaly detector, explanation layer, and review mechanism built, tested, and passing; only the persistent ledger remains** |
-| Methodology write-up (planning doc)                     | ~85%                                                                                                                                                     |
-| Literature review                                       | ~40% — most sources verified, prose still thin                                                                                                           |
-| Results / Discussion / Conclusion                       | Not started                                                                                                                                              |
+| Area                                                    | Status                                                                                                                                                                                                                                                      |
+| ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Data collection, cleaning, EDA                          | ~95%                                                                                                                                                                                                                                                        |
+| Correlation analysis                                    | ~95%                                                                                                                                                                                                                                                        |
+| Clustering (Q1)                                         | ~85% — stability check confirmed on external validation data, not yet on this project's own core data                                                                                                                                                       |
+| RF feasibility demo                                     | ~90%                                                                                                                                                                                                                                                        |
+| External validation (independent ground-truth datasets) | ~90% — strong result, not yet written up as a clean notebook                                                                                                                                                                                                |
+| **HITL pipeline (Q2)**                                  | **~80% — rule-based detector, anomaly detector, explanation layer, and review mechanism built, tested, and manually verified end-to-end (a component-wiring bug was found and fixed during manual testing); persistent ledger is the last remaining piece** |
+| Methodology write-up (planning doc)                     | ~85%                                                                                                                                                                                                                                                        |
+| Literature review                                       | ~40% — most sources verified, prose still thin                                                                                                                                                                                                              |
+| Results / Discussion / Conclusion                       | Not started                                                                                                                                                                                                                                                 |
 
 ## Remaining work
 
 - [x] Rule-based benchmark-breach detector — built, tested (`hitl/rule_based_detector.py`)
 - [x] DBSCAN-based anomaly detector — built, tested (`hitl/anomaly_detector.py`)
-- [ ] Explanation layer (LLM-based, constrained generation — design decided, not built)
-- [ ] Human review mechanism
-- [ ] Persistent ledger
+- [x] Explanation layer (LLM-based, constrained generation) — built, tested, verified against a real local LLM (Ollama)
+- [x] Human review mechanism — built, tested, manually verified end-to-end (`hitl/review.py`)
+- [ ] Persistent ledger + full pipeline orchestration (`hitl/ledger.py`)
 - [ ] Cluster stability check on this project's own core dataset (only validated on external data so far)
 - [ ] Expert validation session (not yet scheduled)
 - [ ] Results write-up
