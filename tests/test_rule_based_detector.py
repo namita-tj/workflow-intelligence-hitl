@@ -1,5 +1,7 @@
 import pandas as pd
-from rule_based_detector import find_metric_breaches, THRESHOLDS
+
+from hitl.rule_based_detector import THRESHOLDS, find_metric_breaches
+
 
 T023_ROW = pd.Series({
     "Teammate ID": "T-023",
