@@ -1,7 +1,7 @@
 ﻿import numpy as np
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
-from anomaly_detector import detect_anomalies
+from hitl.anomaly_detector import detect_anomalies
 
 
 def _load_real_matrix():
