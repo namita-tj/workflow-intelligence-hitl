@@ -239,7 +239,7 @@ def test_validate_response_does_not_catch_soft_recommendations():
     # This SHOULD arguably fail, but doesn't — the assertion below documents
     # current behavior, not desired behavior.
     assert validate_response(response_with_soft_recommendation, normalized) is True
-    
+
 # ============================================================================
 # 5. LLM call wrapper tests — mocked API
 # ============================================================================
@@ -344,7 +344,33 @@ def test_explain_finding_anomaly_with_fallback():
         assert "T-023" in result
         assert "anomalous" in result.lower() or "outlier" in result.lower()
 
+def test_normalize_finding_is_idempotent_for_anomaly():
+    """
+    Regression test for the bug found in live end-to-end testing (2026-08-17):
+    re-normalizing an already-normalized anomaly finding must not corrupt it
+    by misclassifying it as rule_breach.
+    """
+    already_normalized = {
+        "teammate_id": "T-023", "finding_type": "anomaly", "metric": None,
+        "value": None, "benchmark": None, "cluster_label": -1, "is_noise": True,
+    }
+    result = normalize_finding(already_normalized)
+    assert result == already_normalized
+    assert result["finding_type"] == "anomaly"
+    assert result["cluster_label"] == -1
+    assert result["is_noise"] is True
 
+
+def test_normalize_finding_is_idempotent_for_rule_breach():
+    """Same guard, rule_breach side — should also be a no-op."""
+    already_normalized = {
+        "teammate_id": "T-023", "finding_type": "rule_breach", "metric": "Idle Rate",
+        "value": 0.359375, "benchmark": 0.05, "cluster_label": None, "is_noise": None,
+    }
+    result = normalize_finding(already_normalized)
+    assert result == already_normalized
+
+    
 # ============================================================================
 # Integration test — marked to skip by default
 # ============================================================================
