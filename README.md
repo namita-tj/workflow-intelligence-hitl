@@ -20,6 +20,8 @@ See `docs/Methodology.md` for full scope, rationale, and methodology.
 
 ```
 notebooks/   Analysis notebooks (correlation, EDA, clustering)
+hitl/        Q2 pipeline components — detectors, tested Python modules
+tests/       pytest suites for hitl/ components
 docs/        Methodology and project notes
 data/        Processed/derived data only — see note below
 outputs/     Generated CSVs/figures (gitignored, regenerate by running notebooks)
@@ -35,30 +37,34 @@ source files are **not** included here — keep those local only, under
 
 ```bash
 pip install -r requirements.txt
+pytest tests/ -v
 jupyter notebook
 ```
 
 ## Status
 
-| Area | Status |
-|---|---|
-| Data collection, cleaning, EDA | ~95% |
-| Clustering (Q1) | ~90% |
-| HITL prototype (Q2) | ~85% — *not yet in this repo, see below* |
-| RF feasibility demo | ~90% |
-| Methodology write-up | ~85% |
-| Literature review | ~30–40% |
-| Results / Discussion / Conclusion | Not started |
-
-**Missing from this repo:** the HITL copilot demo and pipeline notebook
-built in an earlier session aren't available in this environment — add
-them here manually (e.g. under a new `hitl/` folder) once you have them.
+| Area                                                    | Status                                                                                                                                     |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Data collection, cleaning, EDA                          | ~95%                                                                                                                                       |
+| Correlation analysis                                    | ~95%                                                                                                                                       |
+| Clustering (Q1)                                         | ~85% — stability check confirmed on external validation data, not yet on this project's own core data                                      |
+| RF feasibility demo                                     | ~90%                                                                                                                                       |
+| External validation (independent ground-truth datasets) | ~90% — strong result, not yet written up as a clean notebook                                                                               |
+| **HITL pipeline (Q2)**                                  | **~35% — rule-based detector and anomaly detector built, tested, and passing; explanation layer, review mechanism, and ledger still open** |
+| Methodology write-up (planning doc)                     | ~85%                                                                                                                                       |
+| Literature review                                       | ~40% — most sources verified, prose still thin                                                                                             |
+| Results / Discussion / Conclusion                       | Not started                                                                                                                                |
 
 ## Remaining work
 
-- [ ] Cluster stability check (multiple seeds/bootstrap)
-- [ ] Expert validation of clusters (domain review)
+- [x] Rule-based benchmark-breach detector — built, tested (`hitl/rule_based_detector.py`)
+- [x] DBSCAN-based anomaly detector — built, tested (`hitl/anomaly_detector.py`)
+- [ ] Explanation layer (LLM-based, constrained generation — design decided, not built)
+- [ ] Human review mechanism
+- [ ] Persistent ledger
+- [ ] Cluster stability check on this project's own core dataset (only validated on external data so far)
+- [ ] Expert validation session (not yet scheduled)
 - [ ] Results write-up
-- [ ] Literature review (remaining sections)
+- [ ] Literature review — remaining sections
 - [ ] Introduction, Discussion, Conclusion
 - [ ] Final assembly
