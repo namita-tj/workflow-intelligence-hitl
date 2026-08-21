@@ -15,10 +15,9 @@ persistent, human-validated record.
 ## Research questions
 
 - **RQ1:** Can behavioral patterns indicative of tribal operational
-  intelligence be surfaced from delivery workflow data using unsupervised
-  and anomaly-detection methods, without outcome or interaction data?
-- **RQ2:** Can a Human-in-the-Loop AI system be designed and prototyped to
-  surface, present, and log this inferred operational intelligence for
+  intelligence be surfaced from delivery workflow data?
+- **RQ2:** Can a Human-in-the-Loop AI system be designed to
+  surface and log this inferred operational intelligence for
   expert review?
 
 Full scope, theoretical rationale, and methodology are documented in
@@ -26,15 +25,13 @@ Full scope, theoretical rationale, and methodology are documented in
 
 ## Repository structure
 
-```
-notebooks/   Analysis notebooks (correlation, EDA, clustering)
-hitl/        RQ2 system — rule-based detector, anomaly detector,
-             explanation layer, review mechanism, ledger
-tests/       pytest suites for hitl/ components
-docs/        Methodology and project notes
-data/        Processed/derived data only — see note below
-outputs/     Generated CSVs/figures (gitignored, regenerate by running notebooks)
-```
+notebooks/ Analysis notebooks (correlation, EDA, clustering)
+hitl/ RQ2 system — rule-based detector, anomaly detector,
+explanation layer, review mechanism, ledger
+tests/ pytest suites for hitl/ components
+docs/ Methodology and project notes
+data/ Processed/derived data only — see note below
+outputs/ Generated CSVs/figures (gitignored, regenerate by running notebooks)
 
 ## Data note
 
