@@ -1,7 +1,7 @@
 # Workflow Intelligence & HITL AI
 
 A bachelor's thesis investigating whether **tribal operational intelligence**
-— undocumented, person-dependent operational knowledge — can be inferred
+(undocumented, person-dependent operational knowledge) can be inferred
 from delivery workflow data, and whether a **Human-in-the-Loop AI system**
 can be designed to surface this intelligence for expert validation, without
 replacing human judgment.
@@ -9,7 +9,7 @@ replacing human judgment.
 The work is grounded in Polanyi's theory of tacit knowledge and the SECI
 model of organizational knowledge creation (Nonaka & Takeuchi, 1995), and
 positions the proposed system specifically at the Externalization stage of
-that model — converting candidate behavioral patterns into an explicit,
+that model, converting candidate behavioral patterns into an explicit,
 persistent, human-validated record.
 
 ## Research questions
@@ -20,16 +20,12 @@ persistent, human-validated record.
   surface and log this inferred operational intelligence for
   expert review?
 
-Full scope, theoretical rationale, and methodology are documented in
-`docs/Methodology.md`.
-
 ## Repository structure
 
 notebooks/ Analysis notebooks (correlation, EDA, clustering)
 hitl/ RQ2 system — rule-based detector, anomaly detector,
 explanation layer, review mechanism, ledger
 tests/ pytest suites for hitl/ components
-docs/ Methodology and project notes
 data/ Processed/derived data only — see note below
 outputs/ Generated CSVs/figures (gitignored, regenerate by running notebooks)
 
@@ -78,7 +74,7 @@ result = process_finding(breaches[0], backend="ollama")
   phrasing ("it is essential for the manager to investigate further")
   despite explicit prompt instructions against this. This is documented
   as a known limitation rather than engineered away — see
-  `docs/Methodology.md` and `hitl/explanation_layer.py`. This decision is
+  `hitl/explanation_layer.py`. This decision is
   informed by human-AI decision-making literature on automation bias,
   which motivated a deliberate choice not to implement recommendation
   generation in this system.
