@@ -1,25 +1,36 @@
 # Workflow Intelligence & HITL AI
 
-A personal research project exploring whether **tribal operational
-intelligence** — undocumented, person-dependent operational knowledge — can
-be inferred from delivery workflow data, and prototyping a **Human-in-the-Loop
-AI system** to surface it for manager review.
+A bachelor's thesis investigating whether **tribal operational intelligence**
+— undocumented, person-dependent operational knowledge — can be inferred
+from delivery workflow data, and whether a **Human-in-the-Loop AI system**
+can be designed to surface this intelligence for expert validation, without
+replacing human judgment.
 
-## Project questions
+The work is grounded in Polanyi's theory of tacit knowledge and the SECI
+model of organizational knowledge creation (Nonaka & Takeuchi, 1995), and
+positions the proposed system specifically at the Externalization stage of
+that model — converting candidate behavioral patterns into an explicit,
+persistent, human-validated record.
 
-- **Q1:** Can behavioral patterns indicative of tribal operational
+## Research questions
+
+- **RQ1:** Can behavioral patterns indicative of tribal operational
   intelligence be surfaced from delivery workflow data using unsupervised
   and anomaly-detection methods, without outcome or interaction data?
-- **Q2:** Can a Human-in-the-Loop AI system be designed and prototyped to
+- **RQ2:** Can a Human-in-the-Loop AI system be designed and prototyped to
   surface, present, and log this inferred operational intelligence for
-  manager review?
+  expert review?
 
-See `docs/Methodology.md` for full scope, rationale, and methodology.
+Full scope, theoretical rationale, and methodology are documented in
+`docs/Methodology.md`.
 
-## Structure
+## Repository structure
 
 ```
 notebooks/   Analysis notebooks (correlation, EDA, clustering)
+hitl/        RQ2 system — rule-based detector, anomaly detector,
+             explanation layer, review mechanism, ledger
+tests/       pytest suites for hitl/ components
 docs/        Methodology and project notes
 data/        Processed/derived data only — see note below
 outputs/     Generated CSVs/figures (gitignored, regenerate by running notebooks)
@@ -28,37 +39,53 @@ outputs/     Generated CSVs/figures (gitignored, regenerate by running notebooks
 ## Data note
 
 Only cleaned, derived, non-raw data is committed (`data/processed/`). Raw
-source files are **not** included here — keep those local only, under
-`data/raw/`, which is gitignored.
+source files are **not** included here and are kept local only, under
+`data/raw/`, which is gitignored. `ledger.jsonl` (a runtime artifact of the
+HITL system) is likewise gitignored, as it is regenerable rather than
+source data.
 
-## Setup
+## Reproducing the analysis
 
 ```bash
 pip install -r requirements.txt
+pytest tests/ -v
 jupyter notebook
 ```
 
-## Status
+To run the full HITL pipeline against a real finding (requires
+[Ollama](https://ollama.com) running locally with a pulled model, e.g.
+`ollama pull mistral`):
 
-| Area | Status |
-|---|---|
-| Data collection, cleaning, EDA | ~95% |
-| Clustering (Q1) | ~90% |
-| HITL prototype (Q2) | ~85% — *not yet in this repo, see below* |
-| RF feasibility demo | ~90% |
-| Methodology write-up | ~85% |
-| Literature review | ~30–40% |
-| Results / Discussion / Conclusion | Not started |
+```python
+from hitl.rule_based_detector import find_metric_breaches, THRESHOLDS
+from hitl.ledger import process_finding
 
-**Missing from this repo:** the HITL copilot demo and pipeline notebook
-built in an earlier session aren't available in this environment — add
-them here manually (e.g. under a new `hitl/` folder) once you have them.
+breaches = find_metric_breaches(some_teammate_row, THRESHOLDS)
+result = process_finding(breaches[0], backend="ollama")
+```
 
-## Remaining work
+## Documented limitations
 
-- [ ] Cluster stability check (multiple seeds/bootstrap)
-- [ ] Expert validation of clusters (domain review)
-- [ ] Results write-up
-- [ ] Literature review (remaining sections)
-- [ ] Introduction, Discussion, Conclusion
-- [ ] Final assembly
+- Per-teammate output data (CSAT, Defects, Escalations, KPI Achievement)
+  aligned to the same period and granularity as the behavioral data was
+  not obtainable — confirmed across every available source, including
+  client-level CSAT histories, project risk trackers, and a portfolio
+  dashboard. This is the central structural limitation on RQ1's outcome-
+  validation scope. One narrow, period-matched exception was achieved: a
+  negative-control check against documented project delays, which found
+  no behavioral anomaly where the cause was external — indirect
+  supporting evidence, not a full outcome validation.
+- The explanation layer's automated validator checks for factual accuracy
+  only — it does not detect soft recommendation language. Across three
+  independent live Ollama calls, the model included mild recommendation
+  phrasing ("it is essential for the manager to investigate further")
+  despite explicit prompt instructions against this. This is documented
+  as a known limitation rather than engineered away — see
+  `docs/Methodology.md` and `hitl/explanation_layer.py`. This decision is
+  informed by human-AI decision-making literature on automation bias,
+  which motivated a deliberate choice not to implement recommendation
+  generation in this system.
+- DBSCAN-based anomaly detection is parameter-sensitive at this project's
+  sample size; results are treated as candidates for expert review, not
+  confirmed findings — this distinction is the central motivation for
+  RQ2's human validation layer.
