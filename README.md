@@ -22,12 +22,24 @@ persistent, human-validated record.
 
 ## Repository structure
 
-notebooks/ Analysis notebooks (correlation, EDA, clustering)
-hitl/ RQ2 system — rule-based detector, anomaly detector,
-explanation layer, review mechanism, ledger
-tests/ pytest suites for hitl/ components
-data/ Processed/derived data only — see note below
-outputs/ Generated CSVs/figures (gitignored, regenerate by running notebooks)
+```
+notebooks/   00_KPI_Cleaning_Correlation.ipynb      — data cleaning & correlation
+             01_EDA_and_Baseline_Clustering.ipynb   — task-level EDA, K-means baseline
+             02_Clustering_Validation_DBSCAN.ipynb  — stability, PCA check, DBSCAN sweep
+             03_RF_Synthetic_Feasibility.ipynb      — supervised-learning feasibility test
+             04_External_Validation_Metrics.ipynb   — precision/recall/F1 vs. ground truth
+hitl/        RQ2 system — rule-based detector, anomaly detector,
+             explanation layer, review mechanism, ledger
+tests/       pytest suites for hitl/ components
+scripts/     Standalone evaluation scripts (e.g. explanation layer
+             live-evaluation, run outside the notebook pipeline)
+data/        Processed/derived data only — see note below
+outputs/     Generated CSVs/figures (gitignored, regenerate by running notebooks)
+```
+
+Notebooks 01–02 depend on each other in sequence: `01_...` exports
+`teammate_time_allocation_clusters.csv`, which `02_...` loads rather than
+recomputing the baseline clustering. Run 01 before 02.
 
 ## Data note
 
@@ -35,7 +47,9 @@ Only cleaned, derived, non-raw data is committed (`data/processed/`). Raw
 source files are **not** included here and are kept local only, under
 `data/raw/`, which is gitignored. `ledger.jsonl` (a runtime artifact of the
 HITL system) is likewise gitignored, as it is regenerable rather than
-source data.
+source data. External ground-truth data used for validation (notebook 04)
+is cloned fresh at runtime from its own public source and is not committed
+here.
 
 ## Reproducing the analysis
 
@@ -57,6 +71,14 @@ breaches = find_metric_breaches(some_teammate_row, THRESHOLDS)
 result = process_finding(breaches[0], backend="ollama")
 ```
 
+To run a large-scale, statistical evaluation of the explanation layer
+(validation pass rate, recommendation-language frequency, latency),
+requiring Ollama running locally:
+
+```bash
+python scripts/explanation_layer_evaluation.py
+```
+
 ## Documented limitations
 
 - Per-teammate output data (CSAT, Defects, Escalations, KPI Achievement)
@@ -69,16 +91,25 @@ result = process_finding(breaches[0], backend="ollama")
   no behavioral anomaly where the cause was external — indirect
   supporting evidence, not a full outcome validation.
 - The explanation layer's automated validator checks for factual accuracy
-  only — it does not detect soft recommendation language. Across three
-  independent live Ollama calls, the model included mild recommendation
-  phrasing ("it is essential for the manager to investigate further")
-  despite explicit prompt instructions against this. This is documented
-  as a known limitation rather than engineered away — see
-  `hitl/explanation_layer.py`. This decision is
-  informed by human-AI decision-making literature on automation bias,
-  which motivated a deliberate choice not to implement recommendation
-  generation in this system.
+  only — it does not detect soft recommendation language. A systematic
+  evaluation (30 live Ollama calls; see `scripts/explanation_layer_evaluation.py`)
+  found that 46.7% of responses included mild recommendation phrasing
+  despite explicit prompt instructions against this — a frequent, measured
+  limitation rather than a rare occurrence. This is documented as a known
+  limitation rather than engineered away — see `hitl/explanation_layer.py`.
+  This decision is informed by human-AI decision-making literature on
+  automation bias, which motivated a deliberate choice not to implement
+  recommendation generation in this system.
 - DBSCAN-based anomaly detection is parameter-sensitive at this project's
-  sample size; results are treated as candidates for expert review, not
-  confirmed findings — this distinction is the central motivation for
-  RQ2's human validation layer.
+  sample size — the same individual was flagged as noise in anywhere from
+  50% to 89% of tested parameter settings depending on who was examined
+  (see `notebooks/02_Clustering_Validation_DBSCAN.ipynb`); results are
+  treated as candidates for expert review, not confirmed findings, which
+  is the central motivation for RQ2's human validation layer.
+- External validation against published ground truth (8 independent
+  repositories; see `notebooks/04_External_Validation_Metrics.ipynb`)
+  found a precision of 0.667 but a recall of only 0.150 at the person
+  level — the clustering method, by design, can only flag a small number
+  of individuals per case, and therefore misses most true positives in
+  cases where many exist. No external benchmark exists for this specific
+  task.
