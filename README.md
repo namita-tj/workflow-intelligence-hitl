@@ -79,6 +79,24 @@ requiring Ollama running locally:
 python scripts/explanation_layer_evaluation.py
 ```
 
+## Key Results
+
+| Metric                                 | Value         | Source                                             |
+| -------------------------------------- | ------------- | -------------------------------------------------- |
+| External validation precision          | 0.667         | 8 independent repositories, published ground truth |
+| External validation recall             | 0.150         | Same                                               |
+| DBSCAN noise-flag range                | 50%–89%       | Parameter sensitivity sweep, real data             |
+| Clustering silhouette score (k=3)      | 0.364         | MinoriLabs' own data                               |
+| Explanation layer validation pass rate | 100% (30/30)  | Live Ollama evaluation                             |
+| Soft-recommendation rate               | 46.7% (14/30) | Same                                               |
+| Mean response latency                  | 25.07s        | Same                                               |
+
+No external benchmark exists for the clustering-based metrics above, since
+this specific task (passive behavioral clustering for tribal-knowledge
+candidate detection) has no established precedent in the literature — see
+thesis Section 2.4. Full detail and derivation for each metric is in the
+corresponding notebook, listed above.
+
 ## Documented limitations
 
 - Per-teammate output data (CSAT, Defects, Escalations, KPI Achievement)
@@ -91,25 +109,18 @@ python scripts/explanation_layer_evaluation.py
   no behavioral anomaly where the cause was external — indirect
   supporting evidence, not a full outcome validation.
 - The explanation layer's automated validator checks for factual accuracy
-  only — it does not detect soft recommendation language. A systematic
-  evaluation (30 live Ollama calls; see `scripts/explanation_layer_evaluation.py`)
-  found that 46.7% of responses included mild recommendation phrasing
-  despite explicit prompt instructions against this — a frequent, measured
-  limitation rather than a rare occurrence. This is documented as a known
-  limitation rather than engineered away — see `hitl/explanation_layer.py`.
-  This decision is informed by human-AI decision-making literature on
-  automation bias, which motivated a deliberate choice not to implement
-  recommendation generation in this system.
+  only — it does not detect soft recommendation language, as shown in the
+  results above. This is documented as a known limitation rather than
+  engineered away — see `hitl/explanation_layer.py`. This decision is
+  informed by human-AI decision-making literature on automation bias,
+  which motivated a deliberate choice not to implement recommendation
+  generation in this system.
 - DBSCAN-based anomaly detection is parameter-sensitive at this project's
-  sample size — the same individual was flagged as noise in anywhere from
-  50% to 89% of tested parameter settings depending on who was examined
-  (see `notebooks/02_Clustering_Validation_DBSCAN.ipynb`); results are
-  treated as candidates for expert review, not confirmed findings, which
-  is the central motivation for RQ2's human validation layer.
-- External validation against published ground truth (8 independent
-  repositories; see `notebooks/04_External_Validation_Metrics.ipynb`)
-  found a precision of 0.667 but a recall of only 0.150 at the person
-  level — the clustering method, by design, can only flag a small number
-  of individuals per case, and therefore misses most true positives in
-  cases where many exist. No external benchmark exists for this specific
-  task.
+  sample size, as shown in the results above; results are treated as
+  candidates for expert review, not confirmed findings, which is the
+  central motivation for RQ2's human validation layer.
+- The low recall in external validation reflects a structural property of
+  the method: flagging only the smallest cluster per case means most true
+  positives are missed in cases where many exist (e.g. one repository has
+  15 confirmed critical contributors, of which only one could be
+  identified).
