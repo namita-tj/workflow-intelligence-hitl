@@ -1,0 +1,15 @@
+# Normalize line endings across platforms - fixes the LF/CRLF warnings
+# seen when working across Windows and Unix-based systems.
+* text=auto eol=lf
+
+# Explicit for the two file types this repo actually uses
+*.py text eol=lf
+*.ipynb text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+
+# Never touch line endings in data or binary files
+*.csv -text
+*.xlsx binary
+*.png binary
+*.jpg binary
