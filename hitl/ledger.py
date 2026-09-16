@@ -25,6 +25,8 @@ def process_finding(
     input_fn=None,
     ledger_path: str = "ledger.jsonl",
     prompt_style: str = "original",
+    metrics_path: Optional[str] = None,
+    co_occurring_teammates: Optional[list] = None,
 ) -> dict:
     """
     Complete HITL pipeline: normalize once, explain, review, persist to ledger.
@@ -70,6 +72,7 @@ def process_finding(
         backend=backend,
         backend_kwargs=backend_kwargs,
         prompt_style=prompt_style,
+        metrics_path=metrics_path,
     )
 
     # 3. Look up prior reviews of this exact finding, if any — shown to the
@@ -89,6 +92,7 @@ def process_finding(
         input_fn=input_fn,
         reviewer=reviewer,
         prior_reviews=prior_reviews,
+        co_occurring_teammates=co_occurring_teammates,
     )
 
     # 5. Persist — append to ledger

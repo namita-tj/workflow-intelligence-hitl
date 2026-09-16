@@ -165,11 +165,11 @@ def test_process_finding_threads_one_normalized_object(tmp_path, monkeypatch):
     explain_calls = []
     review_calls = []
 
-    def mock_explain_finding(finding, backend=None, backend_kwargs=None, prompt_style=None):
+    def mock_explain_finding(finding, backend=None, backend_kwargs=None, prompt_style=None, metrics_path=None):
         explain_calls.append(finding)
         return "Mock explanation"
 
-    def mock_review_finding(finding, explanation=None, input_fn=None, reviewer=None, prior_reviews=None):
+    def mock_review_finding(finding, explanation=None, input_fn=None, reviewer=None, prior_reviews=None, co_occurring_teammates=None):
         review_calls.append(finding)
         return {
             "teammate_id": finding.get("teammate_id"),
@@ -236,7 +236,7 @@ def test_process_finding_writes_to_ledger(tmp_path, monkeypatch):
     def mock_explain(finding, **kwargs):
         return "Mocked explanation for T-023"
 
-    def mock_review(finding, explanation=None, input_fn=None, reviewer=None, prior_reviews=None):
+    def mock_review(finding, explanation=None, input_fn=None, reviewer=None, prior_reviews=None, co_occurring_teammates=None):
         return {
             "teammate_id": finding.get("teammate_id"),
             "finding_type": finding.get("finding_type"),

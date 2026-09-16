@@ -326,6 +326,7 @@ def explain_finding(
     backend: str = "ollama",
     backend_kwargs: Optional[dict] = None,
     prompt_style: str = "original",
+    metrics_path: Optional[str] = None,
 ) -> str:
     """
     Convert a raw detector finding into a plain-language explanation.
@@ -348,6 +349,13 @@ def explain_finding(
         confirmed compatible with validate_response() (30/30 pass). This
         alternative has NOT been run through the full unit/live-E2E suite
         that covers "original" — treat as experimental until it has been.
+    metrics_path : Optional[str]
+        If provided, logs recommendation-language and potential-hallucination
+        metrics for this call to the given JSON Lines file (see
+        hitl.quality_metrics). Only logs when a real LLM response was
+        obtained — never for fallback-template output, since the fallback
+        is deterministic and has no meaningful "quality" to measure.
+        Defaults to None (no logging), so existing callers are unaffected.
 
     Returns
     -------
@@ -373,9 +381,12 @@ def explain_finding(
 
     # 4. Validate or fall back
     if llm_response and validate_response(llm_response, normalized):
+        if metrics_path is not None:
+            from hitl.quality_metrics import log_quality_metrics
+            log_quality_metrics(llm_response, normalized, metrics_path=metrics_path)
         return llm_response
 
-    # Fallback: pure template
+    # Fallback: pure template — not logged, since there is nothing to measure
     return fallback_explanation(normalized)
 
 

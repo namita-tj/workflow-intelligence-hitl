@@ -36,8 +36,9 @@ from sklearn.preprocessing import StandardScaler
 from hitl.rule_based_detector import find_metric_breaches, THRESHOLDS
 from hitl.anomaly_detector import detect_anomalies
 from hitl.ledger import process_finding
+from hitl.pattern_aggregation import group_by_shared_metric, get_co_occurring_teammates
 
-KPI_FILE_PATH = "data/MinoriLabs - Phase 1 KPI Table - May 2026.xlsx"
+KPI_FILE_PATH = "data/raw/MinoriLabs - Phase 1 KPI Table - May 2026.xlsx"
 KPI_SHEET_NAME = "Phase 1 - KPI Summary"
 FEATURE_COLUMNS = [
     "ETA Achievement", "Rework Rate", "Req. Understanding Ratio",
@@ -110,6 +111,8 @@ def main():
                          help="Only process the first N findings (useful for a quick test run).")
     parser.add_argument("--skip-anomaly", action="store_true", help="Skip DBSCAN anomaly detection.")
     parser.add_argument("--skip-rule-based", action="store_true", help="Skip rule-based detection.")
+    parser.add_argument("--metrics-path", default="quality_metrics.jsonl",
+                         help="Path to log LLM response quality metrics (recommendation language, potential hallucination).")
     args = parser.parse_args()
 
     print(f"Loading KPI data from: {args.kpi_file}")
@@ -143,11 +146,26 @@ def main():
         print("No findings to process. Exiting.")
         return
 
+    # Compute shared-metric groupings once, using the full batch — this is
+    # why co-occurrence can't be computed inside process_finding() itself,
+    # which only ever sees one finding at a time.
+    grouped_by_metric = group_by_shared_metric(all_findings)
+    if grouped_by_metric:
+        print("Shared-metric groups found this run:")
+        for metric, ids in grouped_by_metric.items():
+            print(f"  {metric}: {ids}")
+        print()
+
     results = []
     for i, finding in enumerate(all_findings, 1):
         print(f"\n{'='*60}")
         print(f"Finding {i}/{len(all_findings)}: {finding['teammate_id']} ({finding['finding_type']})")
         print("=" * 60)
+
+        co_occurring = get_co_occurring_teammates(
+            finding.get("teammate_id"), finding.get("metric"), grouped_by_metric
+        ) if finding.get("finding_type") == "rule_breach" else []
+
         try:
             result = process_finding(
                 finding,
@@ -155,6 +173,8 @@ def main():
                 reviewer=args.reviewer,
                 ledger_path=args.ledger_path,
                 prompt_style=args.prompt_style,
+                metrics_path=args.metrics_path,
+                co_occurring_teammates=co_occurring,
             )
             results.append(result)
             print(f"-> Decision: {result['decision']}")
