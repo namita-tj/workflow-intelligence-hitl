@@ -17,6 +17,7 @@ def review_finding(
     input_fn: Callable[[str], str] = input,
     reviewer: Optional[str] = None,
     prior_reviews: Optional[list] = None,
+    co_occurring_teammates: Optional[list] = None,
 ) -> dict:
     """
     Present one finding + its explanation to a human reviewer, capture
@@ -65,7 +66,8 @@ def review_finding(
             reviewer = input_fn("Reviewer name cannot be empty. Try again: ").strip()
 
     # Display the finding and explanation
-    _display_finding(finding, explanation, prior_reviews=prior_reviews)
+    _display_finding(finding, explanation, prior_reviews=prior_reviews,
+                      co_occurring_teammates=co_occurring_teammates)
 
     # Collect decision and annotation
     decision = _prompt_for_decision(input_fn)
@@ -105,13 +107,23 @@ def review_finding(
 # Helper functions for display and input collection
 # ============================================================================
 
-def _display_finding(finding: dict, explanation: str, prior_reviews: Optional[list] = None) -> None:
+def _display_finding(
+    finding: dict,
+    explanation: str,
+    prior_reviews: Optional[list] = None,
+    co_occurring_teammates: Optional[list] = None,
+) -> None:
     """Display the finding and explanation to the reviewer.
 
     prior_reviews, if provided and non-empty, is shown as context above the
     current finding — the most recent prior decision, reviewer, and
     annotation. This informs the reviewer without automatically reapplying
-    a past decision; a fresh decision is always required (Section 3.8.4)."""
+    a past decision; a fresh decision is always required (Section 3.8.4).
+
+    co_occurring_teammates, if provided and non-empty, lists other teammates
+    who breached the same metric in this run — surfaced so the reviewer can
+    consider a shared, team-level pattern rather than only this one
+    individual in isolation."""
     print("\n" + "=" * 70)
     print("FINDING REVIEW")
     print("=" * 70)
@@ -124,6 +136,11 @@ def _display_finding(finding: dict, explanation: str, prior_reviews: Optional[li
               f"by {most_recent.get('reviewer')} on {most_recent.get('timestamp')}")
         print(f"Prior annotation: \"{most_recent.get('annotation')}\"")
         print("(This is shown for context only — please make your own independent decision below.)")
+
+    if co_occurring_teammates:
+        print(f"\nNOTE: {len(co_occurring_teammates)} other teammate(s) also "
+              f"breached this same metric this run: {', '.join(co_occurring_teammates)}")
+        print("(Shown for context — this may reflect a shared, team-level pattern.)")
 
     print(f"\nTeammate: {finding.get('teammate_id')}")
     print(f"Finding Type: {finding.get('finding_type')}")
