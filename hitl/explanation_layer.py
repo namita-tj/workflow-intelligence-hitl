@@ -325,6 +325,7 @@ def explain_finding(
     raw_finding: dict,
     backend: str = "ollama",
     backend_kwargs: Optional[dict] = None,
+    prompt_style: str = "original",
 ) -> str:
     """
     Convert a raw detector finding into a plain-language explanation.
@@ -338,6 +339,15 @@ def explain_finding(
         "ollama" (local, recommended) or "google_ai" (synthetic data only).
     backend_kwargs : Optional[dict]
         Additional arguments to pass to the LLM backend (e.g., {"model": "mistral"}).
+    prompt_style : str
+        "original" (default) uses the single-block prompt covered by this
+        thesis's full RQ2 test suite (60 unit tests, live E2E testing).
+        "two_part" uses an alternative design (statistical description +
+        knowledge-hypothesis questions) that eliminated soft-recommendation
+        drift in a 30-call evaluation (0% vs. 46.7%) and was separately
+        confirmed compatible with validate_response() (30/30 pass). This
+        alternative has NOT been run through the full unit/live-E2E suite
+        that covers "original" — treat as experimental until it has been.
 
     Returns
     -------
@@ -350,7 +360,13 @@ def explain_finding(
     normalized = normalize_finding(raw_finding)
 
     # 2. Build prompt
-    prompt = build_prompt(normalized)
+    if prompt_style == "two_part":
+        from hitl.two_part_prompt import build_two_part_prompt
+        prompt = build_two_part_prompt(normalized)
+    elif prompt_style == "original":
+        prompt = build_prompt(normalized)
+    else:
+        raise ValueError(f"Unknown prompt_style: {prompt_style!r}. Expected 'original' or 'two_part'.")
 
     # 3. Call LLM
     llm_response = call_llm(prompt, backend=backend, **backend_kwargs)
