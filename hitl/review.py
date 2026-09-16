@@ -16,6 +16,7 @@ def review_finding(
     explanation: str,
     input_fn: Callable[[str], str] = input,
     reviewer: Optional[str] = None,
+    prior_reviews: Optional[list] = None,
 ) -> dict:
     """
     Present one finding + its explanation to a human reviewer, capture
@@ -64,7 +65,7 @@ def review_finding(
             reviewer = input_fn("Reviewer name cannot be empty. Try again: ").strip()
 
     # Display the finding and explanation
-    _display_finding(finding, explanation)
+    _display_finding(finding, explanation, prior_reviews=prior_reviews)
 
     # Collect decision and annotation
     decision = _prompt_for_decision(input_fn)
@@ -104,11 +105,26 @@ def review_finding(
 # Helper functions for display and input collection
 # ============================================================================
 
-def _display_finding(finding: dict, explanation: str) -> None:
-    """Display the finding and explanation to the reviewer."""
+def _display_finding(finding: dict, explanation: str, prior_reviews: Optional[list] = None) -> None:
+    """Display the finding and explanation to the reviewer.
+
+    prior_reviews, if provided and non-empty, is shown as context above the
+    current finding — the most recent prior decision, reviewer, and
+    annotation. This informs the reviewer without automatically reapplying
+    a past decision; a fresh decision is always required (Section 3.8.4)."""
     print("\n" + "=" * 70)
     print("FINDING REVIEW")
     print("=" * 70)
+
+    if prior_reviews:
+        most_recent = prior_reviews[-1]
+        print(f"\nNOTE: This finding was previously reviewed "
+              f"{len(prior_reviews)} time(s).")
+        print(f"Most recent prior decision: {most_recent.get('decision')} "
+              f"by {most_recent.get('reviewer')} on {most_recent.get('timestamp')}")
+        print(f"Prior annotation: \"{most_recent.get('annotation')}\"")
+        print("(This is shown for context only — please make your own independent decision below.)")
+
     print(f"\nTeammate: {finding.get('teammate_id')}")
     print(f"Finding Type: {finding.get('finding_type')}")
 
