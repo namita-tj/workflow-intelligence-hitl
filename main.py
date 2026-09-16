@@ -32,13 +32,14 @@ import sys
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
+from sklearn.cluster import KMeans
 
 from hitl.rule_based_detector import find_metric_breaches, THRESHOLDS
 from hitl.anomaly_detector import detect_anomalies
 from hitl.ledger import process_finding
 from hitl.pattern_aggregation import group_by_shared_metric, get_co_occurring_teammates
 
-KPI_FILE_PATH = "data/raw/MinoriLabs - Phase 1 KPI Table - May 2026.xlsx"
+KPI_FILE_PATH = "data/MinoriLabs - Phase 1 KPI Table - May 2026.xlsx"
 KPI_SHEET_NAME = "Phase 1 - KPI Summary"
 FEATURE_COLUMNS = [
     "ETA Achievement", "Rework Rate", "Req. Understanding Ratio",
@@ -115,18 +116,18 @@ def clean_kpi_data(df_raw: pd.DataFrame, verbose: bool = True) -> pd.DataFrame:
     return df
 
 
-def load_kpi_data(path: str, verbose: bool = True) -> pd.DataFrame:
+def load_kpi_data(path: str, sheet_name: str = "Phase 1 - KPI Summary", verbose: bool = True) -> pd.DataFrame:
     """Load a raw MinoriLabs Phase 1 KPI Summary export and clean it,
     matching Section 3.2's documented cleaning steps exactly."""
-    df_raw = pd.read_excel(path, sheet_name=KPI_SHEET_NAME)
+    df_raw = pd.read_excel(path, sheet_name=sheet_name)
     return clean_kpi_data(df_raw, verbose=verbose)
 
 
-def load_raw_task_data(path: str) -> pd.DataFrame:
-    """Load the 'Raw Data' sheet (task-level rows), used for anomaly
-    detection's task-category feature matrix - a separate sheet from the
-    KPI Summary used for rule-based detection."""
-    return pd.read_excel(path, sheet_name="Raw Data")
+def load_raw_task_data(path: str, sheet_name: str = "Raw Data") -> pd.DataFrame:
+    """Load the task-level raw data sheet, used for anomaly detection's
+    task-category feature matrix - a separate sheet from the KPI Summary
+    used for rule-based detection."""
+    return pd.read_excel(path, sheet_name=sheet_name)
 
 
 def run_rule_based_detection(df: pd.DataFrame) -> list:
@@ -204,9 +205,73 @@ def run_anomaly_detection(raw_df: pd.DataFrame, eps: float = 4.0, min_samples: i
     ]
 
 
+def run_kmeans_candidate_detection(raw_df: pd.DataFrame, k: int = 3) -> dict:
+    """
+    Run K-means clustering to identify individual-level candidates, matching
+    the exact methodology in Sections 3.4/4.2: cluster on the same
+    10-category task-allocation percentage matrix used for DBSCAN, then
+    identify the smallest cluster(s) as candidates for review.
+
+    IMPORTANT - this is informational output only, and is deliberately NOT
+    routed through explain_finding()/review_finding()/the ledger. Doing so
+    would require a genuinely new finding-type schema, which Section 3.9's
+    schema stress test found breaks the existing pipeline silently, and
+    which this thesis explicitly documents as a deliberate scope boundary
+    (Section 3.10.4) rather than an oversight. This function surfaces
+    K-means candidates for the user to see and consider separately, without
+    reversing that stated design decision.
+
+    Parameters
+    ----------
+    raw_df : pd.DataFrame
+        The "Raw Data" sheet (task-level rows).
+    k : int
+        Number of clusters. Defaults to 3, the validated choice
+        (Section 3.5); a different value should only be used after
+        reviewing fresh diagnostics (see check_parameter_drift.py).
+
+    Returns
+    -------
+    dict
+        {
+          "cluster_sizes": {cluster_label: size, ...},
+          "smallest_cluster_label": int,
+          "candidates": [teammate_id, ...],
+        }
+    """
+    pivot = raw_df.pivot_table(
+        index="Teammate ID", columns="Task Category",
+        values="Month Total (hrs)", aggfunc="sum", fill_value=0,
+    )
+    pivot = pivot.loc[pivot.sum(axis=1) > 0]
+    pivot_pct = pivot.div(pivot.sum(axis=1), axis=0)
+
+    X = StandardScaler().fit_transform(pivot_pct.values)
+    teammate_ids = pivot_pct.index.tolist()
+
+    km = KMeans(n_clusters=k, n_init=10, random_state=42).fit(X)
+
+    cluster_sizes = {}
+    for label in km.labels_:
+        cluster_sizes[int(label)] = cluster_sizes.get(int(label), 0) + 1
+
+    smallest_label = min(cluster_sizes, key=cluster_sizes.get)
+    candidates = [tid for tid, label in zip(teammate_ids, km.labels_) if label == smallest_label]
+
+    return {
+        "cluster_sizes": cluster_sizes,
+        "smallest_cluster_label": smallest_label,
+        "candidates": candidates,
+    }
+
+
 def main():
     parser = argparse.ArgumentParser(description="Run the full RQ2 HITL pipeline end-to-end.")
     parser.add_argument("--kpi-file", default=KPI_FILE_PATH, help="Path to the KPI Excel file.")
+    parser.add_argument("--kpi-sheet-name", default="Phase 1 - KPI Summary",
+                         help="Name of the KPI Summary sheet within the Excel file.")
+    parser.add_argument("--raw-sheet-name", default="Raw Data",
+                         help="Name of the task-level raw data sheet within the Excel file.")
     parser.add_argument("--prompt-style", default="original", choices=["original", "two_part"],
                          help="Which explanation prompt design to use.")
     parser.add_argument("--reviewer", default=None, help="Reviewer name (skips interactive prompt).")
@@ -214,6 +279,8 @@ def main():
     parser.add_argument("--limit", type=int, default=None,
                          help="Only process the first N findings (useful for a quick test run).")
     parser.add_argument("--skip-anomaly", action="store_true", help="Skip DBSCAN anomaly detection.")
+    parser.add_argument("--skip-kmeans", action="store_true",
+                         help="Skip K-means candidate detection (informational only).")
     parser.add_argument("--skip-rule-based", action="store_true", help="Skip rule-based detection.")
     parser.add_argument("--metrics-path", default="quality_metrics.jsonl",
                          help="Path to log LLM response quality metrics (recommendation language, potential hallucination).")
@@ -221,7 +288,7 @@ def main():
 
     print(f"Loading KPI data from: {args.kpi_file}")
     try:
-        df = load_kpi_data(args.kpi_file)
+        df = load_kpi_data(args.kpi_file, sheet_name=args.kpi_sheet_name)
     except FileNotFoundError:
         print(f"ERROR: file not found at '{args.kpi_file}'. "
               f"Pass the correct path with --kpi-file.", file=sys.stderr)
@@ -235,10 +302,18 @@ def main():
         all_findings.extend(rule_findings)
 
     if not args.skip_anomaly:
-        raw_df = load_raw_task_data(args.kpi_file)
+        raw_df = load_raw_task_data(args.kpi_file, sheet_name=args.raw_sheet_name)
         anomaly_findings = run_anomaly_detection(raw_df)
         print(f"Anomaly detector: {len(anomaly_findings)} teammate(s) flagged as noise.")
         all_findings.extend(anomaly_findings)
+
+        if not args.skip_kmeans:
+            kmeans_result = run_kmeans_candidate_detection(raw_df)
+            print(f"\nK-means candidate detection (informational only - NOT sent for "
+                  f"review; see Section 3.10.4 on this deliberate scope boundary):")
+            print(f"  Cluster sizes: {kmeans_result['cluster_sizes']}")
+            print(f"  Smallest cluster ({kmeans_result['smallest_cluster_label']}) "
+                  f"candidates: {kmeans_result['candidates']}")
 
     if args.limit:
         all_findings = all_findings[:args.limit]
