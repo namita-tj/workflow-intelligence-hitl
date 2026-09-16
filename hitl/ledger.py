@@ -24,6 +24,7 @@ def process_finding(
     reviewer: Optional[str] = None,
     input_fn=None,
     ledger_path: str = "ledger.jsonl",
+    prompt_style: str = "original",
 ) -> dict:
     """
     Complete HITL pipeline: normalize once, explain, review, persist to ledger.
@@ -46,6 +47,9 @@ def process_finding(
         Input function for review interaction. Defaults to builtin input().
     ledger_path : str
         Path to the JSON Lines ledger file.
+    prompt_style : str
+        "original" (default, fully covered by this thesis's RQ2 test suite)
+        or "two_part" (experimental alternative — see explain_finding()).
 
     Returns
     -------
@@ -65,6 +69,7 @@ def process_finding(
         normalized_finding,
         backend=backend,
         backend_kwargs=backend_kwargs,
+        prompt_style=prompt_style,
     )
 
     # 3. Review — also uses the normalized finding (not raw, not re-derived)
