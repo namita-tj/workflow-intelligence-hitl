@@ -1,237 +1,237 @@
 #,Capability Practice,Teammate ID,Client Code,Period,Task Category,Property,Task Description,Month Total (hrs),Flagged,text_cluster
-1,Webtech,T-001,CLIENT-01,May 2026,Billable-Meetings,,Internal Meetings,0.0,No,0
-2,Webtech,T-001,CLIENT-01,May 2026,Billable-Production,,Deployment - Credit amount updates for auto decline,0.0,No,1
-3,Webtech,T-001,CLIENT-01,May 2026,Billable-Production,,Additional logs to trace issues,0.0,No,0
-4,Webtech,T-001,CLIENT-01,May 2026,Billable-Production,,Retry Mechanism - Marketo,0.0,No,0
-5,Webtech,T-001,CLIENT-01,May 2026,Billable-Meetings,,Client Meeting,0.0,No,4
-6,Webtech,T-002,CLIENT-01,May 2026,Billable-Production,,CLIENT-01-Application monitoring,10.0,No,4
-7,Webtech,T-002,CLIENT-01,May 2026,Billable-Meetings,,Daily Huddle,10.0,No,0
-8,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,Ongoing Maintenance - DB clean up,10.0,No,0
-9,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,Ongoing Maintenance - Plugin updates,10.0,No,1
-10,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,CLIENT-02 DB Cleaner issue – analyzing and fixing,4.0,No,4
-11,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,CLIENT-02 Mega menu – working,4.0,No,4
-12,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,Resolving the CLIENT-02 header issue,4.0,No,4
-13,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,Working on the CLIENT-02 mega menu,4.0,No,4
-14,Webtech,T-003,CLIENT-02,May 2026,Billable-QC,,QC comparing live site and staging site and preparing a document,8.0,No,0
-15,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,crossing checking the plugins functions and codes thta affect the DB Cleaner and resolving,5.0,No,0
-16,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,CLIENT-02 staging site creating,4.0,No,4
-17,Webtech,T-003,CLIENT-02,May 2026,Billable-QC,,comparing the staging site with live site,2.0,No,0
-18,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,plan upgrade analysing in site ground and db cleaner issue analysing  - CLIENT-02,2.0,No,4
-19,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,CLIENT-02 - dev environment creating,5.0,No,4
-20,Webtech,T-003,CLIENT-02,May 2026,Billable-Reporting,,CLIENT-02 - Pagespeed optimaton checking and finding the issues,3.0,No,4
-21,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,CLIENT-02 - mega menu working for desktop,8.0,No,4
-22,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,plugin updates and daily DB Pro Cleaner,5.5,No,0
-23,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,plugins update and dbcleaner work -CLIENT-02,2.0,No,4
-24,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,mobile mega menu working  and be cleaner work - CLIENT-02,8.0,No,4
-25,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,changing the theme and backuping the dev site working on mega menu header -CLIENT-02,8.0,No,4
-26,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,trying get back the style and shortcode of old enfold theme to helo elementor theme -CLIENT-02,7.0,No,4
-27,Webtech,T-003,CLIENT-02,May 2026,Billable-QC,,qc points noting completed the desktop mega menu - CLIENT-02,1.0,No,4
-28,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,mobile mega menu working   and completed and finding the soolton for multi theme issue - CLIENT-02,6.0,No,4
-29,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,"changing to enfold theme form helo elemetor and worked on desktop, tablet and mobile mega menu header-CLIENT-02",0.0,No,4
-30,Webtech,T-003,CLIENT-02,May 2026,Non Billable-Learning,,PHP function clause fixed and single builder environment,12.0,No,0
-31,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,"changing to enfold theme form helo elemetor and worked on desktop, tablet and mobile mega menu header-CLIENT-02",8.0,No,4
-32,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,worked on correction and qc of the mega menu template and db claner and plugins update -CLIENT-02,8.0,No,4
-33,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,Db cleaner document and plugins updates document,1.0,No,0
-34,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,chaanging the home page and about page in elementor they are in enfold customized theme need to chnage-CLIENT-02,8.0,No,4
-35,Webtech,T-003,CLIENT-02,May 2026,Non Billable-Off,,Leave,8.0,No,0
-36,Webtech,T-003,CLIENT-02,May 2026,Billable-Meetings,,Client Meeting,4.0,No,4
-37,Webtech,T-003,CLIENT-02,May 2026,Billable-Meetings,,Internal Meetings,10.0,No,0
-38,Webtech,T-004,CLIENT-03,May 2026,Others,,CLIENT-03 spam issue fixing,1.0,Yes,4
-39,Webtech,T-004,CLIENT-03,May 2026,Others,,CLIENT-03 spam issue fully analysing and find a solution and send to the client,7.0,Yes,4
-40,Webtech,T-004,CLIENT-03,May 2026,Others,,Analysis the issue on image update and provided suggestion to client on  images sliders,4.0,Yes,4
-41,Webtech,T-004,CLIENT-03,May 2026,Others,,slider button issue fixing in mobile and desktop and the slider animation issue fixed and qc,7.0,Yes,0
-42,Data,T-005,CLIENT-04,May 2026,Billable-Meetings,,Daily Huddle,9.0,No,0
-43,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Profile Validation - Set (7),23.5,No,0
-44,Data,T-005,CLIENT-04,May 2026,Billable-Production,,"Overall Contacts Standardization - Annual Revenue,Contact, Industry",8.0,No,0
-45,Data,T-005,CLIENT-04,May 2026,Billable-QC,,Contact Audit set 7 QC,1.5,No,0
-46,Data,T-005,CLIENT-04,May 2026,Billable-Meetings,,Client Meeting,3.0,No,4
-47,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Email validation - Set 7,2.0,No,0
-48,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Profile not available contacts validation - Set 7,3.0,No,0
-49,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Profile Validation - Set 7,8.0,No,0
-50,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Profile validation - Set 8,23.5,No,0
-51,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Set 7 Imported to Hubspot,1.0,No,0
-52,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Event Contact - Profile Validation,26.0,No,0
-53,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Event Contact -  Address Validation,3.0,No,0
-54,Data,T-005,CLIENT-04,May 2026,Billable-Requirement Understanding,,Golden prospect reworks and ppt creation,2.0,No,0
-55,Data,T-005,CLIENT-04,May 2026,Billable-Production,,"Final Set - 8 Submission(Overall Contacts Standardization - Annual Revenue,Contact, Industry)",4.0,No,0
-56,Data,T-005,CLIENT-04,May 2026,Billable-QC,,"Email Validation, Duplicate Check - Set (9)",3.5,No,0
-57,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Set (9) Profile Validation,12.5,No,0
-58,Data,T-005,CLIENT-04,May 2026,Billable-Production,,CLIENT-04 - Event List Email Validation,2.0,No,4
-59,Data,T-005,CLIENT-04,May 2026,Billable-Production,,CLIENT-04 - Event List Profile Validation,3.5,No,4
-60,Data,T-005,CLIENT-04,May 2026,Billable-Production,,CLIENT-04 - Event List Profile not available Manual Validation,7.5,No,4
-61,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Profile Validation and Overall Validation - Set 8,4.0,No,0
-62,Data,T-005,CLIENT-04,May 2026,Billable-Requirement Understanding,,Event list audit,2.0,No,0
-63,Data,T-005,CLIENT-04,May 2026,Billable-QC,,Event list audit checks,1.5,No,0
-64,Data,T-005,CLIENT-04,May 2026,Billable-Requirement Understanding,,Omnichannel campaign approach,1.5,No,0
-65,Data,T-005,CLIENT-04,May 2026,Billable-Meetings,,Omnichannel campaign approach,1.0,No,0
-66,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Dashboard data curation,1.5,No,0
-67,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Dashboard creation,3.0,No,0
-68,Data,T-005,CLIENT-04,May 2026,Billable-Meetings,,Daily Huddle,1.0,No,0
-69,Data,T-005,CLIENT-04,May 2026,Billable-Requirement Understanding,,updating the Scope of Document for market research based on Cami's Feedback,4.0,No,0
-70,Data,T-005,CLIENT-04,May 2026,Billable-Meetings,,Client Meeting,1.0,No,4
-71,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Gantt chart creation,1.5,No,0
-72,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Industry scope documentation (WIP),1.0,No,0
-73,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Initial Project scoping and basic study,2.0,No,0
-74,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Market research report preparation (WIP),7.5,No,0
-75,Data,T-005,CLIENT-04,May 2026,Billable-Requirement Understanding,,Research and analysis for updated scope,6.0,No,0
-76,Data,T-005,CLIENT-04,May 2026,Billable-QC,,Scoping document comments review,2.0,No,0
-77,Data,T-005,CLIENT-04,May 2026,Billable-Meetings,,Internal meetings,1.0,No,0
-78,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,New Campaign Implementation,0.5,No,0
-79,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Meetings,,Daily Huddle,10.0,No,0
-80,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Management Meeting - Report,13.0,No,0
-81,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Reporting,,Weekly Report,7.0,No,0
-82,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Campaign Optimization,40.0,No,0
-83,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,New adcopy updates,2.0,No,0
-84,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Landing Page - CMS,8.0,No,3
-85,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Buyer Personas - Ad copies - Tier - 2,4.0,No,0
-86,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Buyer Personas - Ad copies - Tier - 3,4.0,No,0
-87,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Buyer Personas - As Copies - Existing Camp,4.0,No,0
-88,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Analyze Competitor Insight Report - Each Campaign,13.0,No,0
-89,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Analyze each competitor & their ad copies,10.5,No,0
-90,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Analyze the drop of conversion,6.0,No,0
-91,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Analyze ad disapproval,1.0,No,0
-92,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Custome audience - Hubspot leads,6.5,No,0
-93,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,New ad copies - Based on the competitor,4.0,No,0
-94,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Tier 2 Campaign - Aadding placements,3.0,No,0
-95,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Analyze cloudfare Implementation,1.0,No,0
-96,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Analyze PCB Events,4.0,No,0
-97,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Analyze Likedin Campaign  - KPI,7.5,No,0
-98,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Analyze Hubspot contact for google ads campaign,3.5,No,0
-99,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Analyze Bing ads opportunity,2.0,No,0
-100,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Analyze P-Max campaign + Chambers - Lead drops,3.0,No,0
-101,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Campaign Optimization - June Month,2.5,No,0
-102,Webtech,T-007,CLIENT-05,May 2026,Billable-Meetings,,Daily Standup Meeting,8.5,No,0
-103,Webtech,T-007,CLIENT-05,May 2026,Billable-Meetings,,Task Description,6.0,No,0
-104,Webtech,T-007,CLIENT-05,May 2026,Billable-Meetings,,CLIENT-05 - Weekly Review meeting,1.5,No,4
-105,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,Home Page - Slider,2.0,No,3
-106,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,LP - Mendix,3.0,No,0
+1,Webtech,T-001,CLIENT-01,May 2026,Billable-Meetings,,Internal Meetings,0.0,No,2
+2,Webtech,T-001,CLIENT-01,May 2026,Billable-Production,,Deployment - Credit amount updates for auto decline,0.0,No,4
+3,Webtech,T-001,CLIENT-01,May 2026,Billable-Production,,Additional logs to trace issues,0.0,No,2
+4,Webtech,T-001,CLIENT-01,May 2026,Billable-Production,,Retry Mechanism - Marketo,0.0,No,2
+5,Webtech,T-001,CLIENT-01,May 2026,Billable-Meetings,,Client Meeting,0.0,No,5
+6,Webtech,T-002,CLIENT-01,May 2026,Billable-Production,,CLIENT-01-Application monitoring,10.0,No,5
+7,Webtech,T-002,CLIENT-01,May 2026,Billable-Meetings,,Daily Huddle,10.0,No,2
+8,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,Ongoing Maintenance - DB clean up,10.0,No,2
+9,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,Ongoing Maintenance - Plugin updates,10.0,No,4
+10,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,CLIENT-02 DB Cleaner issue – analyzing and fixing,4.0,No,5
+11,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,CLIENT-02 Mega menu – working,4.0,No,5
+12,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,Resolving the CLIENT-02 header issue,4.0,No,5
+13,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,Working on the CLIENT-02 mega menu,4.0,No,5
+14,Webtech,T-003,CLIENT-02,May 2026,Billable-QC,,QC comparing live site and staging site and preparing a document,8.0,No,2
+15,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,crossing checking the plugins functions and codes thta affect the DB Cleaner and resolving,5.0,No,2
+16,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,CLIENT-02 staging site creating,4.0,No,5
+17,Webtech,T-003,CLIENT-02,May 2026,Billable-QC,,comparing the staging site with live site,2.0,No,2
+18,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,plan upgrade analysing in site ground and db cleaner issue analysing  - CLIENT-02,2.0,No,5
+19,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,CLIENT-02 - dev environment creating,5.0,No,5
+20,Webtech,T-003,CLIENT-02,May 2026,Billable-Reporting,,CLIENT-02 - Pagespeed optimaton checking and finding the issues,3.0,No,5
+21,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,CLIENT-02 - mega menu working for desktop,8.0,No,5
+22,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,plugin updates and daily DB Pro Cleaner,5.5,No,4
+23,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,plugins update and dbcleaner work -CLIENT-02,2.0,No,5
+24,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,mobile mega menu working  and be cleaner work - CLIENT-02,8.0,No,5
+25,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,changing the theme and backuping the dev site working on mega menu header -CLIENT-02,8.0,No,5
+26,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,trying get back the style and shortcode of old enfold theme to helo elementor theme -CLIENT-02,7.0,No,5
+27,Webtech,T-003,CLIENT-02,May 2026,Billable-QC,,qc points noting completed the desktop mega menu - CLIENT-02,1.0,No,5
+28,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,mobile mega menu working   and completed and finding the soolton for multi theme issue - CLIENT-02,6.0,No,5
+29,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,"changing to enfold theme form helo elemetor and worked on desktop, tablet and mobile mega menu header-CLIENT-02",0.0,No,5
+30,Webtech,T-003,CLIENT-02,May 2026,Non Billable-Learning,,PHP function clause fixed and single builder environment,12.0,No,2
+31,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,"changing to enfold theme form helo elemetor and worked on desktop, tablet and mobile mega menu header-CLIENT-02",8.0,No,5
+32,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,worked on correction and qc of the mega menu template and db claner and plugins update -CLIENT-02,8.0,No,5
+33,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,Db cleaner document and plugins updates document,1.0,No,4
+34,Webtech,T-003,CLIENT-02,May 2026,Billable-Production,,chaanging the home page and about page in elementor they are in enfold customized theme need to chnage-CLIENT-02,8.0,No,5
+35,Webtech,T-003,CLIENT-02,May 2026,Non Billable-Off,,Leave,8.0,No,2
+36,Webtech,T-003,CLIENT-02,May 2026,Billable-Meetings,,Client Meeting,4.0,No,5
+37,Webtech,T-003,CLIENT-02,May 2026,Billable-Meetings,,Internal Meetings,10.0,No,2
+38,Webtech,T-004,CLIENT-03,May 2026,Others,,CLIENT-03 spam issue fixing,1.0,Yes,5
+39,Webtech,T-004,CLIENT-03,May 2026,Others,,CLIENT-03 spam issue fully analysing and find a solution and send to the client,7.0,Yes,5
+40,Webtech,T-004,CLIENT-03,May 2026,Others,,Analysis the issue on image update and provided suggestion to client on  images sliders,4.0,Yes,3
+41,Webtech,T-004,CLIENT-03,May 2026,Others,,slider button issue fixing in mobile and desktop and the slider animation issue fixed and qc,7.0,Yes,3
+42,Data,T-005,CLIENT-04,May 2026,Billable-Meetings,,Daily Huddle,9.0,No,2
+43,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Profile Validation - Set (7),23.5,No,2
+44,Data,T-005,CLIENT-04,May 2026,Billable-Production,,"Overall Contacts Standardization - Annual Revenue,Contact, Industry",8.0,No,2
+45,Data,T-005,CLIENT-04,May 2026,Billable-QC,,Contact Audit set 7 QC,1.5,No,2
+46,Data,T-005,CLIENT-04,May 2026,Billable-Meetings,,Client Meeting,3.0,No,5
+47,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Email validation - Set 7,2.0,No,2
+48,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Profile not available contacts validation - Set 7,3.0,No,2
+49,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Profile Validation - Set 7,8.0,No,2
+50,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Profile validation - Set 8,23.5,No,2
+51,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Set 7 Imported to Hubspot,1.0,No,2
+52,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Event Contact - Profile Validation,26.0,No,2
+53,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Event Contact -  Address Validation,3.0,No,2
+54,Data,T-005,CLIENT-04,May 2026,Billable-Requirement Understanding,,Golden prospect reworks and ppt creation,2.0,No,2
+55,Data,T-005,CLIENT-04,May 2026,Billable-Production,,"Final Set - 8 Submission(Overall Contacts Standardization - Annual Revenue,Contact, Industry)",4.0,No,2
+56,Data,T-005,CLIENT-04,May 2026,Billable-QC,,"Email Validation, Duplicate Check - Set (9)",3.5,No,2
+57,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Set (9) Profile Validation,12.5,No,2
+58,Data,T-005,CLIENT-04,May 2026,Billable-Production,,CLIENT-04 - Event List Email Validation,2.0,No,5
+59,Data,T-005,CLIENT-04,May 2026,Billable-Production,,CLIENT-04 - Event List Profile Validation,3.5,No,5
+60,Data,T-005,CLIENT-04,May 2026,Billable-Production,,CLIENT-04 - Event List Profile not available Manual Validation,7.5,No,5
+61,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Profile Validation and Overall Validation - Set 8,4.0,No,2
+62,Data,T-005,CLIENT-04,May 2026,Billable-Requirement Understanding,,Event list audit,2.0,No,2
+63,Data,T-005,CLIENT-04,May 2026,Billable-QC,,Event list audit checks,1.5,No,2
+64,Data,T-005,CLIENT-04,May 2026,Billable-Requirement Understanding,,Omnichannel campaign approach,1.5,No,2
+65,Data,T-005,CLIENT-04,May 2026,Billable-Meetings,,Omnichannel campaign approach,1.0,No,2
+66,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Dashboard data curation,1.5,No,2
+67,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Dashboard creation,3.0,No,2
+68,Data,T-005,CLIENT-04,May 2026,Billable-Meetings,,Daily Huddle,1.0,No,2
+69,Data,T-005,CLIENT-04,May 2026,Billable-Requirement Understanding,,updating the Scope of Document for market research based on Cami's Feedback,4.0,No,2
+70,Data,T-005,CLIENT-04,May 2026,Billable-Meetings,,Client Meeting,1.0,No,5
+71,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Gantt chart creation,1.5,No,2
+72,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Industry scope documentation (WIP),1.0,No,2
+73,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Initial Project scoping and basic study,2.0,No,2
+74,Data,T-005,CLIENT-04,May 2026,Billable-Production,,Market research report preparation (WIP),7.5,No,2
+75,Data,T-005,CLIENT-04,May 2026,Billable-Requirement Understanding,,Research and analysis for updated scope,6.0,No,3
+76,Data,T-005,CLIENT-04,May 2026,Billable-QC,,Scoping document comments review,2.0,No,2
+77,Data,T-005,CLIENT-04,May 2026,Billable-Meetings,,Internal meetings,1.0,No,2
+78,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,New Campaign Implementation,0.5,No,2
+79,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Meetings,,Daily Huddle,10.0,No,2
+80,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Management Meeting - Report,13.0,No,2
+81,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Reporting,,Weekly Report,7.0,No,2
+82,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Campaign Optimization,40.0,No,2
+83,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,New adcopy updates,2.0,No,4
+84,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Landing Page - CMS,8.0,No,2
+85,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Buyer Personas - Ad copies - Tier - 2,4.0,No,2
+86,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Buyer Personas - Ad copies - Tier - 3,4.0,No,2
+87,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Buyer Personas - As Copies - Existing Camp,4.0,No,2
+88,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Analyze Competitor Insight Report - Each Campaign,13.0,No,2
+89,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Analyze each competitor & their ad copies,10.5,No,2
+90,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Analyze the drop of conversion,6.0,No,2
+91,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Analyze ad disapproval,1.0,No,2
+92,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Custome audience - Hubspot leads,6.5,No,2
+93,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,New ad copies - Based on the competitor,4.0,No,2
+94,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Tier 2 Campaign - Aadding placements,3.0,No,2
+95,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Analyze cloudfare Implementation,1.0,No,2
+96,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Analyze PCB Events,4.0,No,2
+97,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Analyze Likedin Campaign  - KPI,7.5,No,2
+98,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Analyze Hubspot contact for google ads campaign,3.5,No,2
+99,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Analyze Bing ads opportunity,2.0,No,2
+100,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Analyze P-Max campaign + Chambers - Lead drops,3.0,No,2
+101,Search Advertising,T-006,CLIENT-04,May 2026,Billable-Production,,Campaign Optimization - June Month,2.5,No,2
+102,Webtech,T-007,CLIENT-05,May 2026,Billable-Meetings,,Daily Standup Meeting,8.5,No,2
+103,Webtech,T-007,CLIENT-05,May 2026,Billable-Meetings,,Task Description,6.0,No,2
+104,Webtech,T-007,CLIENT-05,May 2026,Billable-Meetings,,CLIENT-05 - Weekly Review meeting,1.5,No,5
+105,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,Home Page - Slider,2.0,No,2
+106,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,LP - Mendix,3.0,No,2
 107,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,1 Blog redirect,0.5,No,1
-108,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,LP - Salesforce,6.5,No,0
-109,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,LP - OutSystems,4.0,No,0
-110,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,QC Checklist preparation,2.5,No,0
-111,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,Home page - Ribbon,1.0,No,3
-112,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,LP - Business Process Automation,5.0,No,0
-113,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,LP - Insurance Services,5.0,No,0
-114,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,LP - Retail and Consumers,6.5,No,0
-115,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,LP - High Tech & Manufacturing,6.0,No,0
-116,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,LP - Public and Government Sector,8.0,No,0
-117,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,LP - Robotic Process Automation,5.0,No,0
-118,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,LP - Test automation,9.0,No,0
-119,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,QC list creation,6.5,No,0
-120,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,PEGA World add Popup,4.5,No,0
-121,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,Recreate main Navigation bar,8.5,No,0
-122,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,Site Page speed test,16.0,No,3
-123,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,Staging to Live instances,2.0,No,0
-124,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,V1 Header QC list created,7.0,No,0
-125,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,Header desktop version created,7.0,No,0
-126,Webtech,T-007,CLIENT-05,May 2026,Billable-Meetings,,Header desktop version feedback and updates,3.0,No,0
-127,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,Homepage Updates,2.0,No,1
-128,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,Header mobile version created,3.0,No,0
-129,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,EBA day Popup created,2.0,No,0
-130,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,"noindex, nofollow - Topgolf",1.0,No,0
-131,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,About us Global Locations update,3.5,No,4
-132,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,Navebar Icon update,0.5,No,4
-133,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,PeopleSocial Playbook,3.0,No,0
-134,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,VM - Blog update,1.0,No,4
-135,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,3 TracEi - Blog update,3.5,No,4
-136,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,Design Iteration Guidelines,5.0,No,0
-137,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,About Us Page optimization,3.0,No,3
-138,Webtech,T-007,CLIENT-05,May 2026,Non Billable-Off,,Leave,16.0,No,0
-139,Calling Support,T-008,CLIENT-05,May 2026,Billable-Meetings,,Weekly Client Meeting,4.0,No,4
-140,Calling Support,T-008,CLIENT-05,May 2026,Billable-Production,,Making calls to prospects,40.0,No,0
-141,Calling Support,T-008,CLIENT-05,May 2026,Billable-Reporting,,Analysing the data and researching,38.5,No,0
-142,Content,T-009,CLIENT-06,May 2026,Billable-Production,,IDS Content Optimization,8.0,No,3
-143,Content,T-009,CLIENT-06,May 2026,Billable-Meetings,,Daily huddle,8.5,No,0
-144,Content,T-009,CLIENT-06,May 2026,Billable-Production,,IDS Content Optimization,8.0,No,3
-145,Content,T-009,CLIENT-06,May 2026,Non Billable-Off,,Leave,24.0,No,0
+108,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,LP - Salesforce,6.5,No,2
+109,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,LP - OutSystems,4.0,No,2
+110,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,QC Checklist preparation,2.5,No,2
+111,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,Home page - Ribbon,1.0,No,2
+112,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,LP - Business Process Automation,5.0,No,2
+113,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,LP - Insurance Services,5.0,No,2
+114,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,LP - Retail and Consumers,6.5,No,2
+115,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,LP - High Tech & Manufacturing,6.0,No,2
+116,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,LP - Public and Government Sector,8.0,No,2
+117,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,LP - Robotic Process Automation,5.0,No,2
+118,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,LP - Test automation,9.0,No,2
+119,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,QC list creation,6.5,No,2
+120,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,PEGA World add Popup,4.5,No,2
+121,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,Recreate main Navigation bar,8.5,No,2
+122,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,Site Page speed test,16.0,No,2
+123,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,Staging to Live instances,2.0,No,2
+124,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,V1 Header QC list created,7.0,No,2
+125,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,Header desktop version created,7.0,No,2
+126,Webtech,T-007,CLIENT-05,May 2026,Billable-Meetings,,Header desktop version feedback and updates,3.0,No,4
+127,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,Homepage Updates,2.0,No,4
+128,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,Header mobile version created,3.0,No,2
+129,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,EBA day Popup created,2.0,No,2
+130,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,"noindex, nofollow - Topgolf",1.0,No,2
+131,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,About us Global Locations update,3.5,No,2
+132,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,Navebar Icon update,0.5,No,2
+133,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,PeopleSocial Playbook,3.0,No,2
+134,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,VM - Blog update,1.0,No,1
+135,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,3 TracEi - Blog update,3.5,No,1
+136,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,Design Iteration Guidelines,5.0,No,2
+137,Webtech,T-007,CLIENT-05,May 2026,Billable-Production,,About Us Page optimization,3.0,No,2
+138,Webtech,T-007,CLIENT-05,May 2026,Non Billable-Off,,Leave,16.0,No,2
+139,Calling Support,T-008,CLIENT-05,May 2026,Billable-Meetings,,Weekly Client Meeting,4.0,No,5
+140,Calling Support,T-008,CLIENT-05,May 2026,Billable-Production,,Making calls to prospects,40.0,No,2
+141,Calling Support,T-008,CLIENT-05,May 2026,Billable-Reporting,,Analysing the data and researching,38.5,No,2
+142,Content,T-009,CLIENT-06,May 2026,Billable-Production,,IDS Content Optimization,8.0,No,1
+143,Content,T-009,CLIENT-06,May 2026,Billable-Meetings,,Daily huddle,8.5,No,2
+144,Content,T-009,CLIENT-06,May 2026,Billable-Production,,IDS Content Optimization,8.0,No,1
+145,Content,T-009,CLIENT-06,May 2026,Non Billable-Off,,Leave,24.0,No,2
 146,Content,T-009,CLIENT-06,May 2026,Billable-Production,,VC old blog updation 1 (Adding Smart stores),8.0,No,1
 147,Content,T-009,CLIENT-06,May 2026,Billable-Production,,VC old blog updation 1 (Adding Smart stores),8.0,No,1
-148,Content,T-009,CLIENT-06,May 2026,Billable-Production,,Addressing review comments on blogs,2.0,No,0
-149,Content,T-009,CLIENT-06,May 2026,Billable-Production,,SM Posts for June (All Properties),6.0,No,0
-150,Content,T-009,CLIENT-06,May 2026,Billable-Meetings,,Fortnightly update call,1.5,No,4
-151,Content,T-009,CLIENT-06,May 2026,Billable-Production,,USI Content optimization,8.0,No,3
-152,Content,T-009,CLIENT-06,May 2026,Billable-Meetings,,HAHA Coolers content discussion,0.5,No,3
-153,Content,T-009,CLIENT-06,May 2026,Billable-Production,,USI Content optimization,8.0,No,3
-154,Content,T-009,CLIENT-06,May 2026,Billable-Meetings,,Call reg SM Posts and Blogs,0.5,No,0
-155,Content,T-009,CLIENT-06,May 2026,Billable-Production,,June Blogs (VC 2 nos),8.0,No,0
-156,Content,T-009,CLIENT-06,May 2026,Billable-Production,,June Blogs (IDS),8.0,No,0
-157,Content,T-009,CLIENT-06,May 2026,Billable-Production,,June Blogs USI,8.0,No,0
-158,Content,T-009,CLIENT-06,May 2026,Billable-Production,,June Blogs EV,8.0,No,3
-159,Content,T-009,CLIENT-06,May 2026,Billable-Production,,June Blogs LM,8.0,No,0
-160,Content,T-009,CLIENT-06,May 2026,Billable-Production,,Addressing comments on reviewd blogs,8.0,No,0
-161,Content,T-009,CLIENT-06,May 2026,Billable-Production,,IDS Content Optimization,8.0,No,3
+148,Content,T-009,CLIENT-06,May 2026,Billable-Production,,Addressing review comments on blogs,2.0,No,2
+149,Content,T-009,CLIENT-06,May 2026,Billable-Production,,SM Posts for June (All Properties),6.0,No,2
+150,Content,T-009,CLIENT-06,May 2026,Billable-Meetings,,Fortnightly update call,1.5,No,2
+151,Content,T-009,CLIENT-06,May 2026,Billable-Production,,USI Content optimization,8.0,No,2
+152,Content,T-009,CLIENT-06,May 2026,Billable-Meetings,,HAHA Coolers content discussion,0.5,No,2
+153,Content,T-009,CLIENT-06,May 2026,Billable-Production,,USI Content optimization,8.0,No,2
+154,Content,T-009,CLIENT-06,May 2026,Billable-Meetings,,Call reg SM Posts and Blogs,0.5,No,2
+155,Content,T-009,CLIENT-06,May 2026,Billable-Production,,June Blogs (VC 2 nos),8.0,No,2
+156,Content,T-009,CLIENT-06,May 2026,Billable-Production,,June Blogs (IDS),8.0,No,1
+157,Content,T-009,CLIENT-06,May 2026,Billable-Production,,June Blogs USI,8.0,No,2
+158,Content,T-009,CLIENT-06,May 2026,Billable-Production,,June Blogs EV,8.0,No,2
+159,Content,T-009,CLIENT-06,May 2026,Billable-Production,,June Blogs LM,8.0,No,2
+160,Content,T-009,CLIENT-06,May 2026,Billable-Production,,Addressing comments on reviewd blogs,8.0,No,2
+161,Content,T-009,CLIENT-06,May 2026,Billable-Production,,IDS Content Optimization,8.0,No,1
 162,Content,T-009,CLIENT-06,May 2026,Billable-Production,,Smart Cooler Blog 1,6.0,No,1
-163,Content,T-009,CLIENT-06,May 2026,Billable-Rework,,Addressing comments on reviewd blogs,2.0,No,0
-164,Content,T-009,CLIENT-06,May 2026,Billable-Production,,USI Content optimization,7.0,No,3
-165,Content,T-009,CLIENT-06,May 2026,Billable-Production,,SV Content Optimization,1.0,No,3
+163,Content,T-009,CLIENT-06,May 2026,Billable-Rework,,Addressing comments on reviewd blogs,2.0,No,2
+164,Content,T-009,CLIENT-06,May 2026,Billable-Production,,USI Content optimization,7.0,No,2
+165,Content,T-009,CLIENT-06,May 2026,Billable-Production,,SV Content Optimization,1.0,No,2
 166,Content,T-009,CLIENT-06,May 2026,Billable-Production,,Smart Cooler Blog 2,4.0,No,1
-167,Content,T-009,CLIENT-06,May 2026,Billable-Rework,,Addressing comments on reviewd blogs,4.0,No,0
+167,Content,T-009,CLIENT-06,May 2026,Billable-Rework,,Addressing comments on reviewd blogs,4.0,No,2
 168,Content,T-009,CLIENT-06,May 2026,Billable-Production,,Smart Cooler Blog 3,4.0,No,1
-169,Content,T-009,CLIENT-06,May 2026,Billable-Production,,USI Content optimization,4.0,No,3
+169,Content,T-009,CLIENT-06,May 2026,Billable-Production,,USI Content optimization,4.0,No,2
 170,Content,T-009,CLIENT-06,May 2026,Billable-Production,,Smart Cooler Blog 4,5.0,No,1
 171,Content,T-009,CLIENT-06,May 2026,Billable-Production,,Smart Cooler Blog 5,4.0,No,1
 172,Content,T-009,CLIENT-06,May 2026,Billable-Production,,Smart Cooler Blog 5,4.0,No,1
-173,Content,T-009,CLIENT-06,May 2026,Billable-Production,,SV Content Optimization,0.0,No,3
-174,Content,T-009,CLIENT-06,May 2026,Billable-Meetings,,Daily huddle,0.0,No,0
+173,Content,T-009,CLIENT-06,May 2026,Billable-Production,,SV Content Optimization,0.0,No,2
+174,Content,T-009,CLIENT-06,May 2026,Billable-Meetings,,Daily huddle,0.0,No,2
 175,Content,T-009,CLIENT-06,May 2026,Billable-Production,,Smart Cooler Blog 2,0.0,No,1
-176,Content,T-009,CLIENT-06,May 2026,Billable-Production,,Addressing comments on reviewd blogs,0.0,No,0
-177,Content,T-009,CLIENT-06,May 2026,Billable-Meetings,,Fortnightly call,0.0,No,0
-178,Content,T-009,CLIENT-06,May 2026,Billable-Meetings,,Daily huddle,0.0,No,0
+176,Content,T-009,CLIENT-06,May 2026,Billable-Production,,Addressing comments on reviewd blogs,0.0,No,2
+177,Content,T-009,CLIENT-06,May 2026,Billable-Meetings,,Fortnightly call,0.0,No,2
+178,Content,T-009,CLIENT-06,May 2026,Billable-Meetings,,Daily huddle,0.0,No,2
 179,Content,T-009,CLIENT-06,May 2026,Billable-Production,,Smart Cooler Blog 3,0.0,No,1
 180,Content,T-009,CLIENT-06,May 2026,Billable-Production,,Smart Cooler Blog 4,5.0,No,1
 181,Content,T-009,CLIENT-06,May 2026,Billable-Production,,Smart Cooler Blog 5,4.0,No,1
-182,Content,T-009,CLIENT-06,May 2026,Billable-Meetings,,Daily huddle,0.25,No,0
-183,Graphics,T-010,CLIENT-06,May 2026,Billable-Meetings,,Client Meeting,5.0,No,4
-184,Graphics,T-010,CLIENT-06,May 2026,Billable-Meetings,,Internal Meeting,11.0,No,0
-185,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,VCOM March Revenue Attribution Analysis PPT - (R/U -5 Min),2.5,No,3
-186,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,EV March Revenue Attribution Analysis PPT - (R/U -5 Min),2.5,No,3
-187,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Laundry Wraps - (R/U -5 Min),4.0,No,5
-188,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,FDIC Post Show Email - (R/U -5 Min),2.5,No,5
-189,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Update Express Combo Visual Banner - (R/U -5 Min),1.0,No,5
-190,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Update Homepage Graphic - (R/U -5 Min),1.0,No,5
-191,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Feb EV Blog banner- 2026 - (R/U -5 Min),1.5,No,5
-192,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Update Website Images-Spectra - (R/U -5 Min),1.0,No,5
-193,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Apr EV Blog banner - 2026 - (R/U -5 Min),0.5,No,5
-194,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Dec VC Blog banner - 2025 - (R/U -5 Min),0.5,No,5
-195,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Dec IDS Blog banner - 2025 - (R/U -5 Min),0.5,No,5
-196,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Mar EV Blog banner- 2026 - (R/U -5 Min),0.5,No,5
-197,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Feb VC Blog banner and infographic - 2026 - (R/U -5 Min),2.0,No,5
-198,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,EV - Extended $500 Futura Savings Emails - (R/U -5 Min),2.5,No,5
-199,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,SM Posts- May,9.5,No,0
-200,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,2 Wraps for Dale Hubbard - (R/U -5 Min),2.0,No,5
-201,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Canteen Branded Equipment- Model 3627_3628 - (R/U -5 Min),2.0,No,5
-202,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Clinton County 3605 Wrap - (R/U -5 Min),1.0,No,2
-203,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,West ADA Graphics FRONT DOOR wrap - (R/U -5 Min),1.0,No,2
-204,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Smart cooler promotional banner - (R/U -5 Min),1.0,No,5
-205,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Update Express Combo Visual Banner - (R/U -5 Min),1.0,No,5
-206,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Innovative Machines Wrap - CARDINAL LG OCALA - (R/U -5 Min),3.0,No,2
-207,Graphics,T-010,CLIENT-06,May 2026,Billable-QC,,May - Week 1 - Internal QC,0.5,No,0
-208,Graphics,T-010,CLIENT-06,May 2026,Billable-Requirement Understanding,,May  - Week 1 - Requirement understanding (110 min),2.0,No,5
-209,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Laundry Soap Dispenser Sell Sheet-SV  - (R/U -5 Min),1.0,No,5
-210,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,KareBox247 Wrap - (R/U -5 Min),2.0,No,2
-211,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Smart cooler promotional banner - (R/U -5 Min),2.0,No,5
-212,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Mar VC Blog banner - 2026 - (R/U -5 Min),1.0,No,5
-213,Graphics,T-010,CLIENT-06,May 2026,Billable-QC,,Saluda Wrap - (R/U -5 Min),1.0,No,2
-214,Graphics,T-010,CLIENT-06,May 2026,Billable-QC,,Indian Lake Wrap - (R/U -5 Min),1.0,No,2
-215,Graphics,T-010,CLIENT-06,May 2026,Billable-QC,,Colonial Wrap - (R/U -5 Min),1.0,No,2
-216,Graphics,T-010,CLIENT-06,May 2026,Billable-QC,,Jerabek Elementary 3575 - (R/U -5 Min),1.0,No,5
-217,Graphics,T-010,CLIENT-06,May 2026,Billable-QC,,Dothan Wrap - (R/U -5 Min),1.5,No,2
-218,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,East Liverpool 3605 & 3659  - (R/U -5 Min),3.0,No,5
-219,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Replace Elevator Machine Images_ EV - (R/U -5 Min),0.5,No,5
-220,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,FRONT DOOR ONLY Linton Elevator Wrap (Swoop) - (R/U -5 Min),1.0,No,2
-221,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Jackson County Public Health - (R/U -5 Min),3.0,No,5
-222,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Update Spectra Featured Image-EV - (R/U -5 Min),0.5,No,5
-223,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Resize &amp; optimize the freshpoint image - (R/U -5 Min),0.5,No,5
-224,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Spectra Email-EV - (R/U -5 Min),2.0,No,5
-225,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Spectra Email-USI - (R/U -5 Min),2.0,No,5
-226,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Spectra Email-FM - (R/U -5 Min),2.0,No,5
-227,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Spectra Email-VC - (R/U -5 Min),2.0,No,5
-228,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,BCHD Outdoor Wrap - (R/U -5 Min),3.0,No,2
-229,Graphics,T-010,CLIENT-06,May 2026,Billable-Rework,,SM Posts- May,3.0,No,0
-230,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Laundry Soap Dispenser Sell Sheet- EV. VC - (R/U -5 Min),1.5,No,5
-231,Graphics,T-010,CLIENT-06,May 2026,Billable-Requirement Understanding,,May  - Week 2 - Requirement understanding (105 min),2.0,No,5
-232,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,April 2026 Revenue Attribution - EV & VCOM - (R/U -5 Min),4.0,No,3
-233,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Update eVending Homepage Graphic - (R/U -5 Min),1.0,No,5
+182,Content,T-009,CLIENT-06,May 2026,Billable-Meetings,,Daily huddle,0.25,No,2
+183,Graphics,T-010,CLIENT-06,May 2026,Billable-Meetings,,Client Meeting,5.0,No,5
+184,Graphics,T-010,CLIENT-06,May 2026,Billable-Meetings,,Internal Meeting,11.0,No,2
+185,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,VCOM March Revenue Attribution Analysis PPT - (R/U -5 Min),2.5,No,4
+186,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,EV March Revenue Attribution Analysis PPT - (R/U -5 Min),2.5,No,0
+187,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Laundry Wraps - (R/U -5 Min),4.0,No,0
+188,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,FDIC Post Show Email - (R/U -5 Min),2.5,No,0
+189,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Update Express Combo Visual Banner - (R/U -5 Min),1.0,No,0
+190,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Update Homepage Graphic - (R/U -5 Min),1.0,No,0
+191,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Feb EV Blog banner- 2026 - (R/U -5 Min),1.5,No,0
+192,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Update Website Images-Spectra - (R/U -5 Min),1.0,No,0
+193,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Apr EV Blog banner - 2026 - (R/U -5 Min),0.5,No,0
+194,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Dec VC Blog banner - 2025 - (R/U -5 Min),0.5,No,0
+195,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Dec IDS Blog banner - 2025 - (R/U -5 Min),0.5,No,1
+196,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Mar EV Blog banner- 2026 - (R/U -5 Min),0.5,No,0
+197,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Feb VC Blog banner and infographic - 2026 - (R/U -5 Min),2.0,No,0
+198,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,EV - Extended $500 Futura Savings Emails - (R/U -5 Min),2.5,No,0
+199,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,SM Posts- May,9.5,No,2
+200,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,2 Wraps for Dale Hubbard - (R/U -5 Min),2.0,No,0
+201,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Canteen Branded Equipment- Model 3627_3628 - (R/U -5 Min),2.0,No,0
+202,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Clinton County 3605 Wrap - (R/U -5 Min),1.0,No,0
+203,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,West ADA Graphics FRONT DOOR wrap - (R/U -5 Min),1.0,No,0
+204,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Smart cooler promotional banner - (R/U -5 Min),1.0,No,0
+205,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Update Express Combo Visual Banner - (R/U -5 Min),1.0,No,0
+206,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Innovative Machines Wrap - CARDINAL LG OCALA - (R/U -5 Min),3.0,No,0
+207,Graphics,T-010,CLIENT-06,May 2026,Billable-QC,,May - Week 1 - Internal QC,0.5,No,2
+208,Graphics,T-010,CLIENT-06,May 2026,Billable-Requirement Understanding,,May  - Week 1 - Requirement understanding (110 min),2.0,No,0
+209,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Laundry Soap Dispenser Sell Sheet-SV  - (R/U -5 Min),1.0,No,0
+210,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,KareBox247 Wrap - (R/U -5 Min),2.0,No,0
+211,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Smart cooler promotional banner - (R/U -5 Min),2.0,No,0
+212,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Mar VC Blog banner - 2026 - (R/U -5 Min),1.0,No,0
+213,Graphics,T-010,CLIENT-06,May 2026,Billable-QC,,Saluda Wrap - (R/U -5 Min),1.0,No,0
+214,Graphics,T-010,CLIENT-06,May 2026,Billable-QC,,Indian Lake Wrap - (R/U -5 Min),1.0,No,0
+215,Graphics,T-010,CLIENT-06,May 2026,Billable-QC,,Colonial Wrap - (R/U -5 Min),1.0,No,0
+216,Graphics,T-010,CLIENT-06,May 2026,Billable-QC,,Jerabek Elementary 3575 - (R/U -5 Min),1.0,No,0
+217,Graphics,T-010,CLIENT-06,May 2026,Billable-QC,,Dothan Wrap - (R/U -5 Min),1.5,No,0
+218,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,East Liverpool 3605 & 3659  - (R/U -5 Min),3.0,No,0
+219,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Replace Elevator Machine Images_ EV - (R/U -5 Min),0.5,No,0
+220,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,FRONT DOOR ONLY Linton Elevator Wrap (Swoop) - (R/U -5 Min),1.0,No,0
+221,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Jackson County Public Health - (R/U -5 Min),3.0,No,0
+222,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Update Spectra Featured Image-EV - (R/U -5 Min),0.5,No,0
+223,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Resize &amp; optimize the freshpoint image - (R/U -5 Min),0.5,No,0
+224,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Spectra Email-EV - (R/U -5 Min),2.0,No,0
+225,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Spectra Email-USI - (R/U -5 Min),2.0,No,0
+226,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Spectra Email-FM - (R/U -5 Min),2.0,No,0
+227,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Spectra Email-VC - (R/U -5 Min),2.0,No,0
+228,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,BCHD Outdoor Wrap - (R/U -5 Min),3.0,No,0
+229,Graphics,T-010,CLIENT-06,May 2026,Billable-Rework,,SM Posts- May,3.0,No,2
+230,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Laundry Soap Dispenser Sell Sheet- EV. VC - (R/U -5 Min),1.5,No,0
+231,Graphics,T-010,CLIENT-06,May 2026,Billable-Requirement Understanding,,May  - Week 2 - Requirement understanding (105 min),2.0,No,0
+232,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,April 2026 Revenue Attribution - EV & VCOM - (R/U -5 Min),4.0,No,4
+233,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Update eVending Homepage Graphic - (R/U -5 Min),1.0,No,0
 234,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Jan EV Blog - 2026,1.0,No,1
 235,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Jan IDS Blog - 2026,0.5,No,1
 236,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Jan IDS Blog 2 - 2025,0.5,No,1
@@ -247,398 +247,398 @@
 246,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Infographics support for Feb IDS blog 2026,1.0,No,1
 247,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,May EV Blog -Blog Banner Image + Infographic,1.5,No,1
 248,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,APR IDS Blog (II) 2025,1.0,No,1
-249,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Westfield Wrap - (R/U -5 Min),2.0,No,2
-250,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Jerabek Elementary 3575 - (R/U -5 Min),2.0,No,5
-251,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Welcome Letter - (R/U -5 Min),1.5,No,5
-252,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Realistic mockup image creation,4.0,No,0
-253,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,SM Posts- June,18.0,No,0
-254,Graphics,T-010,CLIENT-06,May 2026,Billable-QC,,May - Week 3 - Internal QC,1.0,No,0
-255,Graphics,T-010,CLIENT-06,May 2026,Billable-Requirement Understanding,,May  - Week 3 - Requirement understanding (30 min),0.5,No,5
-256,Graphics,T-010,CLIENT-06,May 2026,Non Billable-Off,,Leave,8.0,No,0
-257,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Add HAHA Coolers to Vending.com,3.0,No,0
-258,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Avon Lake - Full Wraps- (R/U -5 Min),3.0,No,5
-259,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Add HAHA Coolers to eVending - (R/U -5 Min),2.0,No,5
-260,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Jerabek Elementary 3575 - (R/U -5 Min),2.0,No,5
-261,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Mishawaka Wrap - Front Door Only - (R/U -5 Min),0.0,No,2
-262,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Blog Banner: Boost Sales with Smart Vending Coolers - (R/U -5 Min),1.0,No,5
-263,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Blog Banner: Smart Chill Coolers_ VC - (R/U -5 Min),1.0,No,5
-264,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Update Website Banner Graphics_ EV - (R/U -5 Min),2.0,No,5
-265,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,GIF/Video Idea for Spectra- (R/U -5 Min),4.0,No,5
-266,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,EV- Optimize freshpoint product image- (R/U -5 Min),1.0,No,5
-267,Graphics,T-010,CLIENT-06,May 2026,Billable-Rework,,SM Posts- June,5.0,No,0
-268,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Design Printable Warranty PDF- (R/U -5 Min),2.0,No,5
-269,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,USI- Laundry Soap Dispenser Sell Sheet,1.5,No,0
-270,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Add Spectra GIF Images - EV,3.0,No,3
-271,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Add Spectra GIF Images - VC,3.0,No,0
-272,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Laundry Dispenser-Email Promos- (R/U -5 Min),1.5,No,5
-273,Graphics,T-010,CLIENT-06,May 2026,Billable-QC,,May - Week 4 - Internal QC,0.5,No,0
-274,Graphics,T-010,CLIENT-06,May 2026,Billable-Requirement Understanding,,May  - Week 4 - Requirement understanding (55 min),1.0,No,5
-275,Webtech,T-011,CLIENT-06,May 2026,Billable-Meetings,,Huddle,10.0,No,0
-276,Webtech,T-011,CLIENT-06,May 2026,Billable-Meetings,,Web Tech standup meeting,10.0,No,0
-277,Webtech,T-011,CLIENT-06,May 2026,Billable-Meetings,,POSH Quarterly report,1.0,No,0
-278,Webtech,T-011,CLIENT-06,May 2026,Billable-Meetings,,Spectra Launch,0.5,No,0
-279,Webtech,T-011,CLIENT-06,May 2026,Billable-Meetings,,Graphics,2.0,No,0
-280,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,Web Dev Checkin,0.5,No,0
-281,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV Spectra launch,5.0,No,3
-282,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,"EV Theme Update & Customization, QC",13.0,No,4
-283,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,USI - Update to Spectra Pro pages,0.5,No,4
+249,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Westfield Wrap - (R/U -5 Min),2.0,No,0
+250,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Jerabek Elementary 3575 - (R/U -5 Min),2.0,No,0
+251,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Welcome Letter - (R/U -5 Min),1.5,No,0
+252,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Realistic mockup image creation,4.0,No,2
+253,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,SM Posts- June,18.0,No,2
+254,Graphics,T-010,CLIENT-06,May 2026,Billable-QC,,May - Week 3 - Internal QC,1.0,No,2
+255,Graphics,T-010,CLIENT-06,May 2026,Billable-Requirement Understanding,,May  - Week 3 - Requirement understanding (30 min),0.5,No,0
+256,Graphics,T-010,CLIENT-06,May 2026,Non Billable-Off,,Leave,8.0,No,2
+257,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Add HAHA Coolers to Vending.com,3.0,No,2
+258,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Avon Lake - Full Wraps- (R/U -5 Min),3.0,No,0
+259,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Add HAHA Coolers to eVending - (R/U -5 Min),2.0,No,0
+260,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Jerabek Elementary 3575 - (R/U -5 Min),2.0,No,0
+261,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Mishawaka Wrap - Front Door Only - (R/U -5 Min),0.0,No,0
+262,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Blog Banner: Boost Sales with Smart Vending Coolers - (R/U -5 Min),1.0,No,0
+263,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Blog Banner: Smart Chill Coolers_ VC - (R/U -5 Min),1.0,No,0
+264,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Update Website Banner Graphics_ EV - (R/U -5 Min),2.0,No,0
+265,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,GIF/Video Idea for Spectra- (R/U -5 Min),4.0,No,0
+266,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,EV- Optimize freshpoint product image- (R/U -5 Min),1.0,No,0
+267,Graphics,T-010,CLIENT-06,May 2026,Billable-Rework,,SM Posts- June,5.0,No,2
+268,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Design Printable Warranty PDF- (R/U -5 Min),2.0,No,0
+269,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,USI- Laundry Soap Dispenser Sell Sheet,1.5,No,2
+270,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Add Spectra GIF Images - EV,3.0,No,2
+271,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Add Spectra GIF Images - VC,3.0,No,2
+272,Graphics,T-010,CLIENT-06,May 2026,Billable-Production,,Laundry Dispenser-Email Promos- (R/U -5 Min),1.5,No,0
+273,Graphics,T-010,CLIENT-06,May 2026,Billable-QC,,May - Week 4 - Internal QC,0.5,No,2
+274,Graphics,T-010,CLIENT-06,May 2026,Billable-Requirement Understanding,,May  - Week 4 - Requirement understanding (55 min),1.0,No,0
+275,Webtech,T-011,CLIENT-06,May 2026,Billable-Meetings,,Huddle,10.0,No,2
+276,Webtech,T-011,CLIENT-06,May 2026,Billable-Meetings,,Web Tech standup meeting,10.0,No,2
+277,Webtech,T-011,CLIENT-06,May 2026,Billable-Meetings,,POSH Quarterly report,1.0,No,2
+278,Webtech,T-011,CLIENT-06,May 2026,Billable-Meetings,,Spectra Launch,0.5,No,2
+279,Webtech,T-011,CLIENT-06,May 2026,Billable-Meetings,,Graphics,2.0,No,2
+280,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,Web Dev Checkin,0.5,No,2
+281,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV Spectra launch,5.0,No,2
+282,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,"EV Theme Update & Customization, QC",13.0,No,2
+283,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,USI - Update to Spectra Pro pages,0.5,No,2
 284,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VCOM - Interro blog update,3.0,No,4
-285,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC - Update auto vend brochure,0.5,No,4
-286,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Update Product categories,1.0,No,4
+285,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC - Update auto vend brochure,0.5,No,2
+286,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Update Product categories,1.0,No,2
 287,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,IDS - DEC 2025 blog,1.0,No,1
-288,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Update Homepage graphics,0.5,No,4
-289,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,Spectra website updates,1.0,No,0
-290,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,Spectra meta title & description,0.5,No,0
-291,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC - Update Express combo VM,0.5,No,4
+288,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Update Homepage graphics,0.5,No,2
+289,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,Spectra website updates,1.0,No,4
+290,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,Spectra meta title & description,0.5,No,2
+291,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC - Update Express combo VM,0.5,No,2
 292,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC blog publish,1.0,No,1
-293,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VN Theme Update,9.0,No,4
-294,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV Page speed optimization,1.0,No,3
-295,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VCOM & EV CX Updates,6.5,No,3
-296,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,Adding HAHA Coolers,0.5,No,0
-297,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,Spectra GIF/Video,0.5,No,0
-298,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,Update Express Combo visual combo banner,0.5,No,4
+293,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VN Theme Update,9.0,No,2
+294,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV Page speed optimization,1.0,No,2
+295,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VCOM & EV CX Updates,6.5,No,4
+296,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,Adding HAHA Coolers,0.5,No,2
+297,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,Spectra GIF/Video,0.5,No,2
+298,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,Update Express Combo visual combo banner,0.5,No,2
 299,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,Publish March blog fix footer issue,0.5,No,1
-300,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,IDS - EMS bag,0.5,No,0
-301,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV Page customization - Avada fix,3.0,No,3
-302,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC - Page speed optimization,2.0,No,3
+300,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,IDS - EMS bag,0.5,No,1
+301,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV Page customization - Avada fix,3.0,No,2
+302,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC - Page speed optimization,2.0,No,2
 303,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,LM - Publish blog,1.0,No,1
-304,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,Replace elevator machine images,1.0,No,0
-305,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,FV - Update tacking code,0.5,No,4
-306,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,USI - Add Spectra sell sheet,3.0,No,0
-307,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Spectra Meta title & description,0.5,No,3
-308,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,Traditional sales sites - warranty,3.0,No,0
-309,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Update spectra images,0.5,No,4
+304,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,Replace elevator machine images,1.0,No,2
+305,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,FV - Update tacking code,0.5,No,2
+306,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,USI - Add Spectra sell sheet,3.0,No,2
+307,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Spectra Meta title & description,0.5,No,2
+308,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,Traditional sales sites - warranty,3.0,No,2
+309,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Update spectra images,0.5,No,2
 310,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Publish Apr blog,1.0,No,1
-311,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Change Sold Out button on frozen product,5.0,No,3
-312,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Live chat,0.5,No,3
-313,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Shop pay analyse & remove,1.0,No,3
-314,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Add spectra brochures,2.0,No,3
-315,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC - Site Freeze issue fix,5.0,No,0
-316,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Laundry dispenser PDP,2.0,No,3
-317,Webtech,T-011,CLIENT-06,May 2026,Billable-Meetings,,Web Dev Tasks,0.5,No,0
-318,Webtech,T-011,CLIENT-06,May 2026,Billable-Meetings,,Spectra GIF/Video,0.5,No,0
-319,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV Laundry dispenser,1.0,No,3
-320,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC - Replace elevator machine images,1.0,No,0
-321,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Change Sold Out button on frozen product,3.0,No,3
-322,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV PDPs,2.0,No,3
-323,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV CX updates,14.0,No,3
-324,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,Add spectra brochures,1.0,No,0
+311,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Change Sold Out button on frozen product,5.0,No,2
+312,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Live chat,0.5,No,2
+313,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Shop pay analyse & remove,1.0,No,2
+314,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Add spectra brochures,2.0,No,2
+315,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC - Site Freeze issue fix,5.0,No,3
+316,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Laundry dispenser PDP,2.0,No,2
+317,Webtech,T-011,CLIENT-06,May 2026,Billable-Meetings,,Web Dev Tasks,0.5,No,2
+318,Webtech,T-011,CLIENT-06,May 2026,Billable-Meetings,,Spectra GIF/Video,0.5,No,2
+319,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV Laundry dispenser,1.0,No,2
+320,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC - Replace elevator machine images,1.0,No,2
+321,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Change Sold Out button on frozen product,3.0,No,2
+322,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV PDPs,2.0,No,2
+323,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV CX updates,14.0,No,4
+324,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,Add spectra brochures,1.0,No,2
 325,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV Feb blog,1.0,No,1
-326,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VCOm - CX updates,9.5,No,3
-327,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,USI - Maps Pro,1.5,No,0
-328,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV Chat,0.5,No,3
-329,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VN - Service School,2.5,No,0
+326,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VCOm - CX updates,9.5,No,4
+327,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,USI - Maps Pro,1.5,No,2
+328,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV Chat,0.5,No,2
+329,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VN - Service School,2.5,No,2
 330,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Jan blog,1.0,No,1
 331,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - May blog,1.0,No,1
-332,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,Update spectra fetaured images,0.5,No,4
-333,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Intero updates,4.5,No,3
-334,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC - Intero Updates,2.0,No,1
-335,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,IDS - Intero Updates,2.0,No,1
-336,Webtech,T-011,CLIENT-06,May 2026,Billable-Meetings,,Free Standard shipping promo,0.5,No,0
-337,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VN - Update Service Instruction,1.0,No,4
-338,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Website URL structure staging,7.0,No,3
+332,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,Update spectra fetaured images,0.5,No,2
+333,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Intero updates,4.5,No,4
+334,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC - Intero Updates,2.0,No,4
+335,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,IDS - Intero Updates,2.0,No,4
+336,Webtech,T-011,CLIENT-06,May 2026,Billable-Meetings,,Free Standard shipping promo,0.5,No,2
+337,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VN - Update Service Instruction,1.0,No,2
+338,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Website URL structure staging,7.0,No,2
 339,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC - Publish Jan blog,0.5,No,1
 340,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,LM - Publish May blog,0.5,No,1
-341,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC -  Laundry Dispenser LP,0.5,No,0
-342,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Laundry Dispenser - Freshpoint,4.0,No,3
-343,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Update Machine Specs,1.0,No,4
-344,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV PDPs - Staging,1.5,No,3
-345,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,TWG - LayerSlider implementation,2.0,No,0
+341,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC -  Laundry Dispenser LP,0.5,No,2
+342,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Laundry Dispenser - Freshpoint,4.0,No,2
+343,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Update Machine Specs,1.0,No,2
+344,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV PDPs - Staging,1.5,No,2
+345,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,TWG - LayerSlider implementation,2.0,No,2
 346,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC - Publish Jan blog,0.5,No,1
-347,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,FM - Add Spectra brochures,1.5,No,0
-348,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC - Preventive Maintenance,1.0,No,0
-349,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VN - Analyse Settings,1.0,No,0
-350,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC - URL Structure Testing,2.0,No,0
+347,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,FM - Add Spectra brochures,1.5,No,2
+348,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC - Preventive Maintenance,1.0,No,2
+349,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VN - Analyse Settings,1.0,No,2
+350,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC - URL Structure Testing,2.0,No,2
 351,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC - Smart Cooler banner update,1.0,No,1
-352,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,TWG - WP Bakery Plugin Installation,1.5,No,0
-353,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC - URL Structure,3.0,No,0
-354,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,USI - Maps Pro,2.0,No,0
-355,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC - GSC fix,1.0,No,0
-356,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,IDS - EMS bag,0.5,No,0
+352,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,TWG - WP Bakery Plugin Installation,1.5,No,2
+353,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC - URL Structure,3.0,No,2
+354,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,USI - Maps Pro,2.0,No,2
+355,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC - GSC fix,1.0,No,2
+356,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,IDS - EMS bag,0.5,No,1
 357,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Publish blog - Apr,0.5,No,1
-358,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC - Spectra GIF images,0.5,No,0
-359,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Spectra GIF images,0.5,No,3
+358,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC - Spectra GIF images,0.5,No,2
+359,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,EV - Spectra GIF images,0.5,No,2
 360,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,VC - Publish LLC blog,1.0,No,1
-361,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,TWG - Task filter,1.0,No,0
-362,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,FM - Center sepctra images,0.5,No,0
-363,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,IDS - Intero Updates,1.0,No,1
-364,Data,T-012,CLIENT-06,May 2026,Billable-Meetings,,Daily Huddle,9.5,No,0
-365,Data,T-012,CLIENT-06,May 2026,Billable-Production,,"Update SIC, Marketing group, Industry",7.5,No,4
-366,Data,T-012,CLIENT-06,May 2026,Billable-Meetings,,Internal Call,17.0,No,0
-367,Data,T-012,CLIENT-06,May 2026,Billable-Production,,"Update SIC, Marketing group, Industry",17.0,No,4
-368,Data,T-012,CLIENT-06,May 2026,Billable-Production,,April Revenue attribution analysis for EV & VCOM,7.0,No,3
-369,Data,T-012,CLIENT-06,May 2026,Billable-Production,,"Overall contact validation - contact number, annual revenue, industry",8.0,No,0
-370,Data,T-012,CLIENT-06,May 2026,Billable-Production,,April Revenue attribution analysis for EV & VCOM,7.0,No,3
-371,Data,T-012,CLIENT-06,May 2026,Billable-Production,,April Revenue attribution analysis for EV & VCOM,7.0,No,3
-372,Data,T-012,CLIENT-06,May 2026,Billable-Production,,"Update SIC, Marketing group, Industry",6.5,No,4
-373,Data,T-012,CLIENT-06,May 2026,Billable-Production,,VCOM Product Listing,2.0,No,3
-374,Data,T-012,CLIENT-06,May 2026,Billable-Requirement Understanding,,Tools understanding - Facebook Groups Monitoring,4.0,No,0
-375,Data,T-012,CLIENT-06,May 2026,Billable-Production,,Facebook Group Monitoring,61.0,No,0
-376,Data,T-012,CLIENT-06,May 2026,Billable-Production,,Cross checkApril month analysis for EV & VCOM,0.5,No,3
-377,Data,T-012,CLIENT-06,May 2026,Billable-Meetings,,Internal Call (Task discussion),1.5,No,0
-378,Data,T-012,CLIENT-06,May 2026,Billable-Production,,"Update SIC, Marketing group, Industry",6.5,No,4
-379,Data,T-012,CLIENT-06,May 2026,Billable-Production,,Micromart screenshots for CLIENT-06,1.0,No,4
-380,Data,T-012,CLIENT-06,May 2026,Billable-Production,,Facebook Group Monitoring,6.5,No,0
-381,Execution,T-013,CLIENT-06,May 2026,Billable-Meetings,,Daily Huddle,9.5,No,0
-382,Execution,T-013,CLIENT-06,May 2026,Billable-Meetings,,Internal Meeting,14.5,No,0
-383,Execution,T-013,CLIENT-06,May 2026,Billable-Meetings,,Client Meeting,1.5,No,4
-384,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,"Broken links, URL structure & Image alt text - VC Technical SEO audit - TWG KPI Plan",8.5,No,0
-385,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,GSC issues - VC Technical SEO audit - TWG KPI Plan,1.0,No,0
+361,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,TWG - Task filter,1.0,No,2
+362,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,FM - Center sepctra images,0.5,No,2
+363,Webtech,T-011,CLIENT-06,May 2026,Billable-Production,,IDS - Intero Updates,1.0,No,4
+364,Data,T-012,CLIENT-06,May 2026,Billable-Meetings,,Daily Huddle,9.5,No,2
+365,Data,T-012,CLIENT-06,May 2026,Billable-Production,,"Update SIC, Marketing group, Industry",7.5,No,2
+366,Data,T-012,CLIENT-06,May 2026,Billable-Meetings,,Internal Call,17.0,No,2
+367,Data,T-012,CLIENT-06,May 2026,Billable-Production,,"Update SIC, Marketing group, Industry",17.0,No,2
+368,Data,T-012,CLIENT-06,May 2026,Billable-Production,,April Revenue attribution analysis for EV & VCOM,7.0,No,4
+369,Data,T-012,CLIENT-06,May 2026,Billable-Production,,"Overall contact validation - contact number, annual revenue, industry",8.0,No,2
+370,Data,T-012,CLIENT-06,May 2026,Billable-Production,,April Revenue attribution analysis for EV & VCOM,7.0,No,4
+371,Data,T-012,CLIENT-06,May 2026,Billable-Production,,April Revenue attribution analysis for EV & VCOM,7.0,No,4
+372,Data,T-012,CLIENT-06,May 2026,Billable-Production,,"Update SIC, Marketing group, Industry",6.5,No,2
+373,Data,T-012,CLIENT-06,May 2026,Billable-Production,,VCOM Product Listing,2.0,No,4
+374,Data,T-012,CLIENT-06,May 2026,Billable-Requirement Understanding,,Tools understanding - Facebook Groups Monitoring,4.0,No,2
+375,Data,T-012,CLIENT-06,May 2026,Billable-Production,,Facebook Group Monitoring,61.0,No,2
+376,Data,T-012,CLIENT-06,May 2026,Billable-Production,,Cross checkApril month analysis for EV & VCOM,0.5,No,4
+377,Data,T-012,CLIENT-06,May 2026,Billable-Meetings,,Internal Call (Task discussion),1.5,No,2
+378,Data,T-012,CLIENT-06,May 2026,Billable-Production,,"Update SIC, Marketing group, Industry",6.5,No,2
+379,Data,T-012,CLIENT-06,May 2026,Billable-Production,,Micromart screenshots for CLIENT-06,1.0,No,5
+380,Data,T-012,CLIENT-06,May 2026,Billable-Production,,Facebook Group Monitoring,6.5,No,2
+381,Execution,T-013,CLIENT-06,May 2026,Billable-Meetings,,Daily Huddle,9.5,No,2
+382,Execution,T-013,CLIENT-06,May 2026,Billable-Meetings,,Internal Meeting,14.5,No,2
+383,Execution,T-013,CLIENT-06,May 2026,Billable-Meetings,,Client Meeting,1.5,No,5
+384,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,"Broken links, URL structure & Image alt text - VC Technical SEO audit - TWG KPI Plan",8.5,No,2
+385,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,GSC issues - VC Technical SEO audit - TWG KPI Plan,1.0,No,2
 386,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,"May blog SEO QC – EV, IDS, LM, VC",1.0,No,1
 387,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,SM & Blog performance report,3.0,No,1
-388,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,EV website live testing – QC,3.0,No,3
-389,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,VC Spectra products Meta Title & Desc Creation,2.0,No,0
+388,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,EV website live testing – QC,3.0,No,2
+389,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,VC Spectra products Meta Title & Desc Creation,2.0,No,2
 390,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,EV “unassigned” traffic analysis,5.0,No,3
 391,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,EV CRO analysis - May'26,3.5,No,3
 392,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,EV blog publishing,0.5,No,1
-393,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Connect with Shopify Support for GA4 Attribution Issue,1.0,No,0
-394,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,EV Spectra products Meta Title & Desc Creation,2.0,No,3
-395,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,EV New products live – Testing,0.5,No,3
+393,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Connect with Shopify Support for GA4 Attribution Issue,1.0,No,3
+394,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,EV Spectra products Meta Title & Desc Creation,2.0,No,2
+395,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,EV New products live – Testing,0.5,No,2
 396,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Smart cooler promotional banner - VC,1.0,No,1
-397,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,EV Spectra products - Meta Title & Desc creation - Webtech QC,1.0,No,3
+397,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,EV Spectra products - Meta Title & Desc creation - Webtech QC,1.0,No,2
 398,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,"Live chat issue - GTM testing - EV, VC, SV",1.5,No,3
-399,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,EV Broken Link Audit,1.0,No,3
-400,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Sitemap & Robots.txt Audit - EV,1.0,No,3
-401,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,EV - New Theme,2.0,No,3
-402,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,"EV, FM, VCOM - Laundry Updates",6.0,No,3
-403,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Domain Blacklsit Analysys,1.0,No,0
-404,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,EV - GTIN Creation,1.0,No,3
-405,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,CallRail - Webhook issue fix,2.0,No,0
-406,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Chat - Script testing,3.0,No,0
+399,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,EV Broken Link Audit,1.0,No,2
+400,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Sitemap & Robots.txt Audit - EV,1.0,No,2
+401,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,EV - New Theme,2.0,No,2
+402,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,"EV, FM, VCOM - Laundry Updates",6.0,No,4
+403,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Domain Blacklsit Analysys,1.0,No,2
+404,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,EV - GTIN Creation,1.0,No,2
+405,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,CallRail - Webhook issue fix,2.0,No,3
+406,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Chat - Script testing,3.0,No,2
 407,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,VCOM - Pricing Update,1.0,No,4
-408,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,SEMrush issues - EV Technical SEO audit - TWG KPI Plan,3.0,No,3
-409,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,GSC issues - EV Technical SEO audit - TWG KPI Plan,3.0,No,3
-410,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,SV retail VM functionality issue,0.5,No,0
+408,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,SEMrush issues - EV Technical SEO audit - TWG KPI Plan,3.0,No,2
+409,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,GSC issues - EV Technical SEO audit - TWG KPI Plan,3.0,No,2
+410,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,SV retail VM functionality issue,0.5,No,3
 411,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Blog publishing schedule - Co-ordination with Webtech & Graphics,2.0,No,1
-412,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,GA4 - Event Tracking & Setup Validation - VC,0.5,No,0
+412,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,GA4 - Event Tracking & Setup Validation - VC,0.5,No,2
 413,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,March LM Blog - 2026: Ready to publish,0.5,No,1
-414,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,Newsletter form - TY page URL change,0.5,No,3
-415,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,GA4 - Event Tracking & Setup Validation - FV,0.5,No,0
-416,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,"Backlink audit - SV, IDS, FM, EV, VN, VC",2.0,No,3
-417,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Remove the Twitter/X icons from the footer,0.5,No,0
-418,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,SEMrush account crawling issue fix - VC,1.0,No,0
+414,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,Newsletter form - TY page URL change,0.5,No,2
+415,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,GA4 - Event Tracking & Setup Validation - FV,0.5,No,2
+416,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,"Backlink audit - SV, IDS, FM, EV, VN, VC",2.0,No,1
+417,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Remove the Twitter/X icons from the footer,0.5,No,2
+418,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,SEMrush account crawling issue fix - VC,1.0,No,3
 419,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,Published blog QC - VC (2),0.5,No,1
-420,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,VN - SEO for top 20 videos from YT,0.5,No,0
-421,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,SV Website audit - To improve organic performance,0.5,No,0
-422,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Add Spectra FAQ to Websites,1.0,No,0
-423,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Old & New URLs traffic comparison data report,3.0,No,0
-424,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,GTM testing – VC mobile website issue,1.0,No,0
-425,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,"Keywords research for June blogs (6) – VC, USI, LM, IDS, EV",3.5,No,0
-426,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Add Spectra FAQ to Websites,0.5,No,0
+420,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,VN - SEO for top 20 videos from YT,0.5,No,2
+421,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,SV Website audit - To improve organic performance,0.5,No,2
+422,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Add Spectra FAQ to Websites,1.0,No,2
+423,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Old & New URLs traffic comparison data report,3.0,No,2
+424,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,GTM testing – VC mobile website issue,1.0,No,3
+425,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,"Keywords research for June blogs (6) – VC, USI, LM, IDS, EV",3.5,No,1
+426,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Add Spectra FAQ to Websites,0.5,No,2
 427,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,Published blog QC – 8 blogs,2.0,No,1
-428,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,KW Gap Analysis - VC Keywords & Traffic Audit,1.5,No,0
-429,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Competitor Analysis - VC Keywords & Traffic Audit,0.5,No,0
-430,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,GSC CTR Analysis - VC Keywords & Traffic Audit,1.0,No,0
-431,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,SV Technical SEO audit - TWG KPI Plan,4.0,No,0
-432,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,May SM correction post update,2.0,No,4
-433,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Rankings Decline - Combo Vending Machine KWS,0.5,No,0
-434,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,VC website URL structure – All products,3.0,No,0
-435,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,EV meta title & descriptions creation – All Products,4.0,No,3
+428,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,KW Gap Analysis - VC Keywords & Traffic Audit,1.5,No,3
+429,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Competitor Analysis - VC Keywords & Traffic Audit,0.5,No,3
+430,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,GSC CTR Analysis - VC Keywords & Traffic Audit,1.0,No,3
+431,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,SV Technical SEO audit - TWG KPI Plan,4.0,No,2
+432,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,May SM correction post update,2.0,No,2
+433,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Rankings Decline - Combo Vending Machine KWS,0.5,No,2
+434,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,VC website URL structure – All products,3.0,No,2
+435,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,EV meta title & descriptions creation – All Products,4.0,No,2
 436,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,Published blog QC (2),0.5,No,1
-437,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,"Spectra Blogs calendar Document - VC, EV",0.5,No,3
-438,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,VC meta title & descriptions creation – All Products (57),6.0,No,0
-439,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,CLIENT-06 Task list,1.0,No,4
-440,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Declined pages content optimization - EV,0.5,No,3
-441,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Spectra blog topics creation – EV,2.0,No,3
-442,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,EV CX updates QC,2.0,No,3
-443,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,GTM updates,1.5,No,1
-444,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Disable ringCX in GTM,0.5,No,0
+437,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,"Spectra Blogs calendar Document - VC, EV",0.5,No,2
+438,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,VC meta title & descriptions creation – All Products (57),6.0,No,2
+439,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,CLIENT-06 Task list,1.0,No,5
+440,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Declined pages content optimization - EV,0.5,No,2
+441,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Spectra blog topics creation – EV,2.0,No,1
+442,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,EV CX updates QC,2.0,No,4
+443,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,GTM updates,1.5,No,4
+444,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Disable ringCX in GTM,0.5,No,2
 445,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,Published blog QC (12),2.0,No,1
-446,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,QC - Warranty pages,3.0,No,0
+446,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,QC - Warranty pages,3.0,No,2
 447,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,"Blacklist Analysis - VC, EV",2.0,No,3
-448,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,Site Performance update,2.0,No,4
-449,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,GMC - Spectra changes,2.0,No,0
-450,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,SEMRush Site audit update,2.0,No,4
-451,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,VCOM - Nomenclature,1.0,No,3
-452,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Social Mentioning Report,3.0,No,0
-453,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Mobile Freezing issue - VC,3.0,No,0
+448,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,Site Performance update,2.0,No,2
+449,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,GMC - Spectra changes,2.0,No,2
+450,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,SEMRush Site audit update,2.0,No,2
+451,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,VCOM - Nomenclature,1.0,No,4
+452,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Social Mentioning Report,3.0,No,2
+453,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Mobile Freezing issue - VC,3.0,No,3
 454,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,Published blog QC,1.0,No,1
-455,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Competitor Analysis – VC,4.0,No,0
-456,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,VC SERP analysis,1.5,No,0
-457,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Co-ordination with webtech team regarding the pending tasks.,1.0,No,0
-458,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,VC - CRO analysis - TWG KPI Plan,5.5,No,0
-459,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Web tech priority task list,1.0,No,0
+455,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Competitor Analysis – VC,4.0,No,3
+456,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,VC SERP analysis,1.5,No,3
+457,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Co-ordination with webtech team regarding the pending tasks.,1.0,No,2
+458,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,VC - CRO analysis - TWG KPI Plan,5.5,No,2
+459,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Web tech priority task list,1.0,No,2
 460,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Webtech co-ordination regarding broken link issue – EV,2.0,No,3
-461,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,SV CRO analysis,6.0,No,0
-462,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,June SM post graphics update,2.0,No,4
-463,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Google maps API - webtech support,1.0,No,0
+461,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,SV CRO analysis,6.0,No,3
+462,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,June SM post graphics update,2.0,No,2
+463,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Google maps API - webtech support,1.0,No,2
 464,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,VC blog category issue fix,0.5,No,1
-465,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,June SM post publishing,0.5,No,0
-466,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,VC - Post live issues fixing - Webtech QC,1.0,No,0
-467,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Smart coolers GEO Keywords,1.5,No,0
-468,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Backlink audit - VC - Set 2,1.0,No,0
-469,Webtech,T-014,CLIENT-06,May 2026,Billable-Meetings,,Client meeting,13.0,No,4
-470,Webtech,T-014,CLIENT-06,May 2026,Billable-Meetings,,Internal meeting,9.5,No,0
-471,Webtech,T-014,CLIENT-06,May 2026,Billable-Production,,#1008- Investigation on Common Resource File,24.0,No,0
-472,Webtech,T-014,CLIENT-06,May 2026,Billable-Production,,#422 - Temperature Alert Issue,14.0,No,0
-473,Webtech,T-014,CLIENT-06,May 2026,Non Billable-Off,,Leave,8.0,No,0
-474,Webtech,T-014,CLIENT-06,May 2026,Billable-Production,,Demo Preparation - Sprint 36,0.5,No,0
-475,Webtech,T-014,CLIENT-06,May 2026,Billable-Production,,#1129-inventory expiration datatable issue,24.5,No,0
-476,Webtech,T-014,CLIENT-06,May 2026,Billable-Production,,#1425-Transactions table log,34.5,No,0
-477,Webtech,T-014,CLIENT-06,May 2026,Billable-Production,,#Integration Branch Merge,32.0,No,0
-478,Webtech,T-015,CLIENT-06,May 2026,Billable-Meetings,,Client Meetings,12.0,No,4
-479,Webtech,T-015,CLIENT-06,May 2026,Billable-Meetings,,Internal Meetings,9.5,No,0
-480,Webtech,T-015,CLIENT-06,May 2026,Billable-Production,,Story-1421- Code Implementation,13.0,No,0
-481,Webtech,T-015,CLIENT-06,May 2026,Billable-Production,,Story-1424 - Code Implementation,14.0,No,0
-482,Webtech,T-015,CLIENT-06,May 2026,Billable-Production,,Code Review Process,1.0,No,0
-483,Webtech,T-015,CLIENT-06,May 2026,Billable-Production,,Story-1248- Data Analysis and clean-up,7.0,No,0
-484,Webtech,T-015,CLIENT-06,May 2026,Billable-Production,,Story-1468-User Limit Questions: New Table Analysis,22.0,No,0
-485,Webtech,T-015,CLIENT-06,May 2026,Billable-Production,,Story- 352 Story Implementation,7.0,No,0
-486,Webtech,T-015,CLIENT-06,May 2026,Billable-Production,,Story-1468-User Limit Questions: New Table Code Changes,60.5,No,0
-487,Webtech,T-015,CLIENT-06,May 2026,Billable-Production,,Peer Review for Code Changes,4.0,No,0
-488,Webtech,T-015,CLIENT-06,May 2026,Billable-Production,,Peer Review for Code Changes For Integration Branch,4.0,No,0
-489,Webtech,T-015,CLIENT-06,May 2026,Non Billable-Off,,Leave,8.0,No,0
-490,Webtech,T-016,CLIENT-06,May 2026,Billable-Meetings,,Client meeting,11.0,No,4
-491,Webtech,T-016,CLIENT-06,May 2026,Billable-Meetings,,Internal meeting,9.5,No,0
-492,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,Requirement analysis,18.0,No,0
-493,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Integration testing(1101,1102,1103,1104)",11.0,No,0
-494,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Integration testing(1104,1121)",7.0,No,0
-495,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Issue analysis(1249,390)",3.0,No,0
-496,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,Integration testing(1120),1.0,No,0
-497,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Issue analysis(312,1109)",6.0,No,0
-498,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Issue analysis(1433,1442)",6.0,No,0
-499,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Issue analysis(1442,352)",7.0,No,0
-500,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Issue analysis(352,1142)",6.0,No,0
-501,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,Issue analysis(1352),6.0,No,0
-502,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Issue analysis(271,1427)",6.5,No,0
-503,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Issue analysis(271,327)",6.0,No,0
-504,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,Integration testing,13.0,No,0
-505,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Issue analysis(16,324)",4.0,No,0
-506,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Issue analysis(324,1294)",6.0,No,0
-507,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Issue analysis(1294,1295,1423)",6.0,No,0
-508,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,Issue analysis(1423),6.5,No,0
-509,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Issue analysis(1423,1427)",7.0,No,0
-510,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Issue analysis(414,415)",6.0,No,0
-511,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Issue analysis(1129,1134)",7.0,No,0
-512,Webtech,T-016,CLIENT-06,May 2026,Non Billable-Off,,Leave,8.0,No,0
-513,Webtech,T-017,CLIENT-06,May 2026,Billable-Meetings,,Client Meetings,11.5,No,4
-514,Webtech,T-017,CLIENT-06,May 2026,Billable-Meetings,,Internal Meetings,9.5,No,0
-515,Webtech,T-017,CLIENT-06,May 2026,Billable-Production,,Hotfix - 390 - Employee rollup report,7.0,No,0
-516,Webtech,T-017,CLIENT-06,May 2026,Billable-Production,,Ticket#324 - Delete Organization logo,38.5,No,0
-517,Webtech,T-017,CLIENT-06,May 2026,Billable-Production,,Demo Preparation - Sprint 36,2.0,No,0
-518,Webtech,T-017,CLIENT-06,May 2026,Billable-Production,,Ticket#1294 - Remove & Transfer page Selection Issue,10.5,No,0
-519,Webtech,T-017,CLIENT-06,May 2026,Billable-Production,,Ticket#1295 - Remove & Transfer page search issue,10.5,No,0
-520,Webtech,T-017,CLIENT-06,May 2026,Billable-Production,,"Copilot review on Integration branch stories (#1120, #1121, #1105, #1210, #247)",14.0,No,0
-521,Webtech,T-017,CLIENT-06,May 2026,Billable-Production,,Ticket#1249 - Product Import enhancement,26.0,No,0
-522,Webtech,T-017,CLIENT-06,May 2026,Non Billable-Off,,Leave,8.0,No,0
-523,Webtech,T-017,CLIENT-06,May 2026,Billable-Production,,Ticket 414 & 415 Bug fix,14.5,No,0
-524,Webtech,T-017,CLIENT-06,May 2026,Billable-Production,,"Copilot review on Integration branch stories (#1102, #1103, #1104))",6.5,No,0
-525,Webtech,T-017,CLIENT-06,May 2026,Billable-Production,,Ticket #1302 Supplyroom 0 duplication issue,2.0,No,0
-526,Webtech,T-018,CLIENT-06,May 2026,Billable-Meetings,,Client Meetings,10.0,No,4
-527,Webtech,T-018,CLIENT-06,May 2026,Billable-Meetings,,Internal Meetings,8.5,No,0
-528,Webtech,T-018,CLIENT-06,May 2026,Non Billable-Off,,Leave,24.0,No,0
-529,Webtech,T-018,CLIENT-06,May 2026,Billable-Production,,Issue # 1353,14.0,No,0
-530,Webtech,T-018,CLIENT-06,May 2026,Billable-Rework,,"Issue #1101,1102 and 1103",36.5,No,0
-531,Webtech,T-018,CLIENT-06,May 2026,Billable-Production,,Issue # 1455,27.0,No,0
-532,Webtech,T-018,CLIENT-06,May 2026,Billable-Requirement Understanding,,Issue 429 and Started,21.5,No,0
-533,Webtech,T-018,CLIENT-06,May 2026,Billable-Production,,Issue # 200 and 110,21.5,No,0
-534,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - Consolidated the competitor's keywords and search volume analysis,2.0,No,0
-535,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - Competitor's traffic analysis,2.0,No,0
+465,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,June SM post publishing,0.5,No,2
+466,Execution,T-013,CLIENT-06,May 2026,Billable-QC,,VC - Post live issues fixing - Webtech QC,1.0,No,2
+467,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Smart coolers GEO Keywords,1.5,No,2
+468,Execution,T-013,CLIENT-06,May 2026,Billable-Production,,Backlink audit - VC - Set 2,1.0,No,2
+469,Webtech,T-014,CLIENT-06,May 2026,Billable-Meetings,,Client meeting,13.0,No,5
+470,Webtech,T-014,CLIENT-06,May 2026,Billable-Meetings,,Internal meeting,9.5,No,2
+471,Webtech,T-014,CLIENT-06,May 2026,Billable-Production,,#1008- Investigation on Common Resource File,24.0,No,2
+472,Webtech,T-014,CLIENT-06,May 2026,Billable-Production,,#422 - Temperature Alert Issue,14.0,No,3
+473,Webtech,T-014,CLIENT-06,May 2026,Non Billable-Off,,Leave,8.0,No,2
+474,Webtech,T-014,CLIENT-06,May 2026,Billable-Production,,Demo Preparation - Sprint 36,0.5,No,2
+475,Webtech,T-014,CLIENT-06,May 2026,Billable-Production,,#1129-inventory expiration datatable issue,24.5,No,3
+476,Webtech,T-014,CLIENT-06,May 2026,Billable-Production,,#1425-Transactions table log,34.5,No,2
+477,Webtech,T-014,CLIENT-06,May 2026,Billable-Production,,#Integration Branch Merge,32.0,No,2
+478,Webtech,T-015,CLIENT-06,May 2026,Billable-Meetings,,Client Meetings,12.0,No,5
+479,Webtech,T-015,CLIENT-06,May 2026,Billable-Meetings,,Internal Meetings,9.5,No,2
+480,Webtech,T-015,CLIENT-06,May 2026,Billable-Production,,Story-1421- Code Implementation,13.0,No,2
+481,Webtech,T-015,CLIENT-06,May 2026,Billable-Production,,Story-1424 - Code Implementation,14.0,No,2
+482,Webtech,T-015,CLIENT-06,May 2026,Billable-Production,,Code Review Process,1.0,No,2
+483,Webtech,T-015,CLIENT-06,May 2026,Billable-Production,,Story-1248- Data Analysis and clean-up,7.0,No,3
+484,Webtech,T-015,CLIENT-06,May 2026,Billable-Production,,Story-1468-User Limit Questions: New Table Analysis,22.0,No,2
+485,Webtech,T-015,CLIENT-06,May 2026,Billable-Production,,Story- 352 Story Implementation,7.0,No,2
+486,Webtech,T-015,CLIENT-06,May 2026,Billable-Production,,Story-1468-User Limit Questions: New Table Code Changes,60.5,No,2
+487,Webtech,T-015,CLIENT-06,May 2026,Billable-Production,,Peer Review for Code Changes,4.0,No,2
+488,Webtech,T-015,CLIENT-06,May 2026,Billable-Production,,Peer Review for Code Changes For Integration Branch,4.0,No,2
+489,Webtech,T-015,CLIENT-06,May 2026,Non Billable-Off,,Leave,8.0,No,2
+490,Webtech,T-016,CLIENT-06,May 2026,Billable-Meetings,,Client meeting,11.0,No,5
+491,Webtech,T-016,CLIENT-06,May 2026,Billable-Meetings,,Internal meeting,9.5,No,2
+492,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,Requirement analysis,18.0,No,3
+493,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Integration testing(1101,1102,1103,1104)",11.0,No,2
+494,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Integration testing(1104,1121)",7.0,No,2
+495,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Issue analysis(1249,390)",3.0,No,3
+496,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,Integration testing(1120),1.0,No,2
+497,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Issue analysis(312,1109)",6.0,No,3
+498,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Issue analysis(1433,1442)",6.0,No,3
+499,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Issue analysis(1442,352)",7.0,No,3
+500,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Issue analysis(352,1142)",6.0,No,3
+501,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,Issue analysis(1352),6.0,No,3
+502,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Issue analysis(271,1427)",6.5,No,3
+503,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Issue analysis(271,327)",6.0,No,3
+504,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,Integration testing,13.0,No,2
+505,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Issue analysis(16,324)",4.0,No,3
+506,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Issue analysis(324,1294)",6.0,No,3
+507,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Issue analysis(1294,1295,1423)",6.0,No,3
+508,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,Issue analysis(1423),6.5,No,3
+509,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Issue analysis(1423,1427)",7.0,No,3
+510,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Issue analysis(414,415)",6.0,No,3
+511,Webtech,T-016,CLIENT-06,May 2026,Billable-Production,,"Issue analysis(1129,1134)",7.0,No,3
+512,Webtech,T-016,CLIENT-06,May 2026,Non Billable-Off,,Leave,8.0,No,2
+513,Webtech,T-017,CLIENT-06,May 2026,Billable-Meetings,,Client Meetings,11.5,No,5
+514,Webtech,T-017,CLIENT-06,May 2026,Billable-Meetings,,Internal Meetings,9.5,No,2
+515,Webtech,T-017,CLIENT-06,May 2026,Billable-Production,,Hotfix - 390 - Employee rollup report,7.0,No,2
+516,Webtech,T-017,CLIENT-06,May 2026,Billable-Production,,Ticket#324 - Delete Organization logo,38.5,No,2
+517,Webtech,T-017,CLIENT-06,May 2026,Billable-Production,,Demo Preparation - Sprint 36,2.0,No,2
+518,Webtech,T-017,CLIENT-06,May 2026,Billable-Production,,Ticket#1294 - Remove & Transfer page Selection Issue,10.5,No,3
+519,Webtech,T-017,CLIENT-06,May 2026,Billable-Production,,Ticket#1295 - Remove & Transfer page search issue,10.5,No,3
+520,Webtech,T-017,CLIENT-06,May 2026,Billable-Production,,"Copilot review on Integration branch stories (#1120, #1121, #1105, #1210, #247)",14.0,No,2
+521,Webtech,T-017,CLIENT-06,May 2026,Billable-Production,,Ticket#1249 - Product Import enhancement,26.0,No,2
+522,Webtech,T-017,CLIENT-06,May 2026,Non Billable-Off,,Leave,8.0,No,2
+523,Webtech,T-017,CLIENT-06,May 2026,Billable-Production,,Ticket 414 & 415 Bug fix,14.5,No,2
+524,Webtech,T-017,CLIENT-06,May 2026,Billable-Production,,"Copilot review on Integration branch stories (#1102, #1103, #1104))",6.5,No,2
+525,Webtech,T-017,CLIENT-06,May 2026,Billable-Production,,Ticket #1302 Supplyroom 0 duplication issue,2.0,No,3
+526,Webtech,T-018,CLIENT-06,May 2026,Billable-Meetings,,Client Meetings,10.0,No,5
+527,Webtech,T-018,CLIENT-06,May 2026,Billable-Meetings,,Internal Meetings,8.5,No,2
+528,Webtech,T-018,CLIENT-06,May 2026,Non Billable-Off,,Leave,24.0,No,2
+529,Webtech,T-018,CLIENT-06,May 2026,Billable-Production,,Issue # 1353,14.0,No,3
+530,Webtech,T-018,CLIENT-06,May 2026,Billable-Rework,,"Issue #1101,1102 and 1103",36.5,No,3
+531,Webtech,T-018,CLIENT-06,May 2026,Billable-Production,,Issue # 1455,27.0,No,3
+532,Webtech,T-018,CLIENT-06,May 2026,Billable-Requirement Understanding,,Issue 429 and Started,21.5,No,3
+533,Webtech,T-018,CLIENT-06,May 2026,Billable-Production,,Issue # 200 and 110,21.5,No,3
+534,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - Consolidated the competitor's keywords and search volume analysis,2.0,No,1
+535,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - Competitor's traffic analysis,2.0,No,1
 536,Execution,T-019,CLIENT-06,May 2026,Billable-Meetings,,Internal meeting with [name] reg IDS blog task,0.5,No,1
-537,Execution,T-019,CLIENT-06,May 2026,Billable-Meetings,,CLIENT-06 daily huddle,7.0,No,0
-538,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IC meeting reg Quaterly report,0.5,No,0
-539,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,Content review - SV - SEO Optimization,1.0,No,3
-540,Execution,T-019,CLIENT-06,May 2026,Billable-QC,,QC - New theme update (URL and functionality check),4.0,No,4
-541,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,FM - Meta titles and description,1.5,No,0
-542,Execution,T-019,CLIENT-06,May 2026,Billable-Meetings,,Internal meeting with [name] reg SV optimization,0.5,No,0
-543,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS GA4 - Event Tracking & Setup Validation,7.0,No,0
-544,Execution,T-019,CLIENT-06,May 2026,Billable-Meetings,,QC review with [name],0.5,No,0
-545,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,FM GA4 - Event Tracking & Setup Validation,2.0,No,0
-546,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - Prepare recommendation document for vend safety page,9.5,No,3
-547,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - EMS Bag Updates,4.0,No,1
-548,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,VCOM - Laundry Page,4.0,No,3
-549,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,FM - Spectra Updates,4.0,No,0
-550,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,VCOM - SPectra Updates,4.0,No,3
-551,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,EV - SPectra Updates,2.0,No,3
-552,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,FM - Laundry PDP,3.0,No,0
-553,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,VCOM - Laundry PDP,2.0,No,3
-554,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,EV - Laundry PDP,2.0,No,3
-555,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,Spectra - Shipping Configuration,4.0,No,0
-556,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - Prepared meta titles and description,2.0,No,0
-557,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - Prepared H1 tag,0.5,No,0
-558,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - Prepared URL,0.5,No,0
-559,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,TWG -Identified and shared the pending tasks to [name],0.5,No,0
-560,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - KW listing for blogs,1.0,No,0
+537,Execution,T-019,CLIENT-06,May 2026,Billable-Meetings,,CLIENT-06 daily huddle,7.0,No,2
+538,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IC meeting reg Quaterly report,0.5,No,2
+539,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,Content review - SV - SEO Optimization,1.0,No,2
+540,Execution,T-019,CLIENT-06,May 2026,Billable-QC,,QC - New theme update (URL and functionality check),4.0,No,2
+541,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,FM - Meta titles and description,1.5,No,2
+542,Execution,T-019,CLIENT-06,May 2026,Billable-Meetings,,Internal meeting with [name] reg SV optimization,0.5,No,2
+543,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS GA4 - Event Tracking & Setup Validation,7.0,No,2
+544,Execution,T-019,CLIENT-06,May 2026,Billable-Meetings,,QC review with [name],0.5,No,2
+545,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,FM GA4 - Event Tracking & Setup Validation,2.0,No,2
+546,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - Prepare recommendation document for vend safety page,9.5,No,1
+547,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - EMS Bag Updates,4.0,No,4
+548,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,VCOM - Laundry Page,4.0,No,4
+549,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,FM - Spectra Updates,4.0,No,4
+550,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,VCOM - SPectra Updates,4.0,No,4
+551,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,EV - SPectra Updates,2.0,No,4
+552,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,FM - Laundry PDP,3.0,No,2
+553,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,VCOM - Laundry PDP,2.0,No,4
+554,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,EV - Laundry PDP,2.0,No,2
+555,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,Spectra - Shipping Configuration,4.0,No,2
+556,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - Prepared meta titles and description,2.0,No,1
+557,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - Prepared H1 tag,0.5,No,1
+558,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - Prepared URL,0.5,No,1
+559,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,TWG -Identified and shared the pending tasks to [name],0.5,No,2
+560,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - KW listing for blogs,1.0,No,1
 561,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - Blog topics,3.0,No,1
-562,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - Broken link check,2.0,No,0
-563,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,USI - Broken link check,2.0,No,0
-564,Execution,T-019,CLIENT-06,May 2026,Billable-QC,,FM - Meta titles and desc for Spectra products review,0.5,No,0
-565,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,Off Page SEO - KW listing,1.5,No,3
-566,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,Off Page SEO - Content Topic,3.0,No,3
-567,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - Organic Traffic Analysis May'26,2.0,No,0
-568,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,USI - Organic Traffic Analysis May'26,2.0,No,0
-569,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,VN - Organic Traffic Analysis May'26,2.0,No,0
-570,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,VN - GA4 - Event Tracking & Setup Validation,3.5,No,0
-571,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,LM - GA4 - Event Tracking & Setup Validation,2.0,No,0
-572,Execution,T-019,CLIENT-06,May 2026,Billable-QC,,VC - mobile view live testing,1.0,No,0
-573,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,USI - GSC issues (Crawled - currently not indexed),6.5,No,0
-574,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,USI - GSC (Removal links),2.0,No,0
-575,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,VN -  Creating call rail event,1.5,No,0
-576,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,VN - Creating checkout event,1.5,No,0
-577,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,VN - Creating shopping cart event,1.0,No,0
-578,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,USI - GSC (Discovered - currently not indexed),5.0,No,0
-579,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,USI - Sitemap & Robots.txt,0.5,No,0
-580,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - Sitemap & Robots.txt,0.5,No,0
-581,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,Traffic analysis - VN (Last 6 months),3.5,No,0
-582,Execution,T-019,CLIENT-06,May 2026,Billable-Meetings,,Internal meeting with team mates,2.0,No,0
-583,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,Task list taken for the last month,1.0,No,0
-584,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,Traffic analysis - IDS (Last 6 months) from GA4,3.0,No,0
-585,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,Traffic analysis - IDS (Last 6 months) from GSC,2.0,No,0
-586,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - GSC (Discovered - currently not indexed),7.0,No,0
-587,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,TWG - Robot.txt for all properties,2.0,No,0
-588,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,June SM post content update,7.0,No,4
-589,Execution,T-019,CLIENT-06,May 2026,Non Billable-Off,,Leave,8.0,No,0
-590,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - GSC issues (Crawled - currently not indexed),5.0,No,0
-591,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - Manually indexing (Crawled - currently not indexed),8.0,No,0
-592,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - GSC removal links,1.0,No,0
-593,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,"IDS, USI - Sitemap",1.0,No,0
-594,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,Content review - SV SEO optimization,1.5,No,3
-595,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,USI - Image alt text,2.0,No,0
-596,Execution,T-019,CLIENT-06,May 2026,Billable-Meetings,,Discussion with [name] reg SV content review,0.5,No,3
-597,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,USI - URL structure check,2.0,No,0
-598,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - Image alt text,5.0,No,0
-599,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - URL structure check,5.0,No,0
-600,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,VN - Creating add to cart event,2.0,No,0
-601,Webtech,T-020,CLIENT-06,May 2026,Billable-Production,,VCOM & FM Product page updates,7.5,No,3
-602,Webtech,T-020,CLIENT-06,May 2026,Billable-Production,,CLIENT-06 plugins update(PHP Update),66.0,No,4
+562,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - Broken link check,2.0,No,1
+563,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,USI - Broken link check,2.0,No,2
+564,Execution,T-019,CLIENT-06,May 2026,Billable-QC,,FM - Meta titles and desc for Spectra products review,0.5,No,2
+565,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,Off Page SEO - KW listing,1.5,No,2
+566,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,Off Page SEO - Content Topic,3.0,No,2
+567,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - Organic Traffic Analysis May'26,2.0,No,1
+568,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,USI - Organic Traffic Analysis May'26,2.0,No,3
+569,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,VN - Organic Traffic Analysis May'26,2.0,No,3
+570,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,VN - GA4 - Event Tracking & Setup Validation,3.5,No,2
+571,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,LM - GA4 - Event Tracking & Setup Validation,2.0,No,2
+572,Execution,T-019,CLIENT-06,May 2026,Billable-QC,,VC - mobile view live testing,1.0,No,2
+573,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,USI - GSC issues (Crawled - currently not indexed),6.5,No,2
+574,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,USI - GSC (Removal links),2.0,No,2
+575,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,VN -  Creating call rail event,1.5,No,2
+576,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,VN - Creating checkout event,1.5,No,2
+577,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,VN - Creating shopping cart event,1.0,No,2
+578,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,USI - GSC (Discovered - currently not indexed),5.0,No,2
+579,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,USI - Sitemap & Robots.txt,0.5,No,2
+580,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - Sitemap & Robots.txt,0.5,No,1
+581,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,Traffic analysis - VN (Last 6 months),3.5,No,3
+582,Execution,T-019,CLIENT-06,May 2026,Billable-Meetings,,Internal meeting with team mates,2.0,No,2
+583,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,Task list taken for the last month,1.0,No,2
+584,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,Traffic analysis - IDS (Last 6 months) from GA4,3.0,No,1
+585,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,Traffic analysis - IDS (Last 6 months) from GSC,2.0,No,1
+586,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - GSC (Discovered - currently not indexed),7.0,No,1
+587,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,TWG - Robot.txt for all properties,2.0,No,2
+588,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,June SM post content update,7.0,No,2
+589,Execution,T-019,CLIENT-06,May 2026,Non Billable-Off,,Leave,8.0,No,2
+590,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - GSC issues (Crawled - currently not indexed),5.0,No,1
+591,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - Manually indexing (Crawled - currently not indexed),8.0,No,1
+592,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - GSC removal links,1.0,No,1
+593,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,"IDS, USI - Sitemap",1.0,No,1
+594,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,Content review - SV SEO optimization,1.5,No,2
+595,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,USI - Image alt text,2.0,No,2
+596,Execution,T-019,CLIENT-06,May 2026,Billable-Meetings,,Discussion with [name] reg SV content review,0.5,No,2
+597,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,USI - URL structure check,2.0,No,2
+598,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - Image alt text,5.0,No,1
+599,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,IDS - URL structure check,5.0,No,2
+600,Execution,T-019,CLIENT-06,May 2026,Billable-Production,,VN - Creating add to cart event,2.0,No,2
+601,Webtech,T-020,CLIENT-06,May 2026,Billable-Production,,VCOM & FM Product page updates,7.5,No,4
+602,Webtech,T-020,CLIENT-06,May 2026,Billable-Production,,CLIENT-06 plugins update(PHP Update),66.0,No,5
 603,Webtech,T-020,CLIENT-06,May 2026,Billable-Production,,Spectra Product update (VCOM & FM),8.0,No,4
-604,Webtech,T-020,CLIENT-06,May 2026,Billable-Production,,"LM , VCOM, FM & FV blog and page updates",26.5,No,1
-605,Webtech,T-020,CLIENT-06,May 2026,Billable-Reporting,,Plugin update report,3.0,No,4
-606,Webtech,T-020,CLIENT-06,May 2026,Billable-Production,,Blog updates and pages updates across properties,12.5,No,1
+604,Webtech,T-020,CLIENT-06,May 2026,Billable-Production,,"LM , VCOM, FM & FV blog and page updates",26.5,No,4
+605,Webtech,T-020,CLIENT-06,May 2026,Billable-Reporting,,Plugin update report,3.0,No,2
+606,Webtech,T-020,CLIENT-06,May 2026,Billable-Production,,Blog updates and pages updates across properties,12.5,No,4
 607,Webtech,T-020,CLIENT-06,May 2026,Billable-Production,,"FM,VC,IDS,USI Blog and Page updates",16.0,No,1
-608,Webtech,T-020,CLIENT-06,May 2026,Billable-Production,,page speed optimization-SV (desktop),4.0,No,3
-609,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,Canteen Branded Equipment- Model 3627_3628 - (R/U -5 Min),2.0,No,5
-610,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,Jackson County Public Health,2.0,No,0
+608,Webtech,T-020,CLIENT-06,May 2026,Billable-Production,,page speed optimization-SV (desktop),4.0,No,2
+609,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,Canteen Branded Equipment- Model 3627_3628 - (R/U -5 Min),2.0,No,0
+610,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,Jackson County Public Health,2.0,No,2
 611,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,KareBox247 Wrap,2.0,No,2
 612,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,Yellowstone Wrap 3W Combo,2.0,No,2
-613,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,VCOM - Extended $500 Express Combo Discount Emails - (R/U -5 Min),2.0,No,5
+613,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,VCOM - Extended $500 Express Combo Discount Emails - (R/U -5 Min),2.0,No,0
 614,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,Saluda Wrap,2.0,No,2
 615,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,Indian Lake Wrap,2.0,No,2
 616,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,Colonial Wrap,2.0,No,2
-617,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,Jerabek Elementary 3575,2.0,No,0
+617,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,Jerabek Elementary 3575,2.0,No,2
 618,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,Dothan Wrap,2.0,No,2
 619,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,South Harrison Wrap,2.0,No,2
 620,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,Westfield Wrap,2.0,No,2
 621,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,Primary Shield Wrap,2.0,No,2
-622,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,NJDOH SD5000-R Outdoor,3.0,No,0
+622,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,NJDOH SD5000-R Outdoor,3.0,No,2
 623,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,OASAS SD5000-R Outdoor Machine Wrap,3.0,No,2
-624,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,Canteen Branded Equipment,3.0,No,0
+624,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,Canteen Branded Equipment,3.0,No,2
 625,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,Mishawaka Wrap - Front Door Only,1.0,No,2
-626,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,Jerabek Elementary 3575,1.0,No,0
-627,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,Produce Realistic Product Concepts at Locations,0.5,No,0
-628,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,Monster Sign Only for CB500,0.0,No,0
+626,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,Jerabek Elementary 3575,1.0,No,2
+627,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,Produce Realistic Product Concepts at Locations,0.5,No,2
+628,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,Monster Sign Only for CB500,0.0,No,2
 629,Graphics,T-021,CLIENT-06,May 2026,Billable-Production,,Pitt Graphics Wrap 3575B,2.0,No,2
-630,Data,T-022,CLIENT-06,May 2026,Billable-Meetings,,Daily huddle,3.5,No,0
-631,Data,T-022,CLIENT-06,May 2026,Billable-Requirement Understanding,,EV and VCOM analysis,1.0,No,3
-632,Data,T-022,CLIENT-06,May 2026,Billable-QC,,EV and VCOM analysis,1.0,No,3
-633,Data,T-022,CLIENT-06,May 2026,Billable-Meetings,,Internal meetings,3.5,No,0
-634,Data,T-022,CLIENT-06,May 2026,Billable-Production,,EV and VCOM analysis,2.0,No,3
-635,Data,T-022,CLIENT-06,May 2026,Billable-Requirement Understanding,,Facebook group monitoring,3.0,No,0
-636,Data,T-022,CLIENT-06,May 2026,Billable-Production,,Facebook group monitoring analysis,0.0,No,0
-637,Data,T-022,CLIENT-06,May 2026,Billable-QC,,Facebook group monitoring,1.0,No,0
-638,Data,T-022,CLIENT-06,May 2026,Billable-QC,,Facebook group monitoring,1.0,No,0
-639,Data,T-022,CLIENT-06,May 2026,Billable-Idle,,Idle Component,24.0,No,0
-640,Search Advertising,T-023,CLIENT-06,May 2026,Billable-Meetings,,Daily Huddle,4.5,No,0
-641,Search Advertising,T-023,CLIENT-06,May 2026,Billable-Production,,Monthly Performance Report,13.0,No,0
-642,Search Advertising,T-023,CLIENT-06,May 2026,Billable-Production,,"Search  Term Audit (EV, VC, IDS, VN, SV)",5.0,No,3
-643,Search Advertising,T-023,CLIENT-06,May 2026,Billable-Idle,,Idle Component,57.5,No,0
+630,Data,T-022,CLIENT-06,May 2026,Billable-Meetings,,Daily huddle,3.5,No,2
+631,Data,T-022,CLIENT-06,May 2026,Billable-Requirement Understanding,,EV and VCOM analysis,1.0,No,4
+632,Data,T-022,CLIENT-06,May 2026,Billable-QC,,EV and VCOM analysis,1.0,No,4
+633,Data,T-022,CLIENT-06,May 2026,Billable-Meetings,,Internal meetings,3.5,No,2
+634,Data,T-022,CLIENT-06,May 2026,Billable-Production,,EV and VCOM analysis,2.0,No,4
+635,Data,T-022,CLIENT-06,May 2026,Billable-Requirement Understanding,,Facebook group monitoring,3.0,No,2
+636,Data,T-022,CLIENT-06,May 2026,Billable-Production,,Facebook group monitoring analysis,0.0,No,2
+637,Data,T-022,CLIENT-06,May 2026,Billable-QC,,Facebook group monitoring,1.0,No,2
+638,Data,T-022,CLIENT-06,May 2026,Billable-QC,,Facebook group monitoring,1.0,No,2
+639,Data,T-022,CLIENT-06,May 2026,Billable-Idle,,Idle Component,24.0,No,2
+640,Search Advertising,T-023,CLIENT-06,May 2026,Billable-Meetings,,Daily Huddle,4.5,No,2
+641,Search Advertising,T-023,CLIENT-06,May 2026,Billable-Production,,Monthly Performance Report,13.0,No,2
+642,Search Advertising,T-023,CLIENT-06,May 2026,Billable-Production,,"Search  Term Audit (EV, VC, IDS, VN, SV)",5.0,No,1
+643,Search Advertising,T-023,CLIENT-06,May 2026,Billable-Idle,,Idle Component,57.5,No,2
