@@ -72,18 +72,87 @@ def process_finding(
         prompt_style=prompt_style,
     )
 
-    # 3. Review — also uses the normalized finding (not raw, not re-derived)
+    # 3. Look up prior reviews of this exact finding, if any — shown to the
+    #    reviewer as context (Section on recurring findings), never used to
+    #    skip or auto-resolve the review itself.
+    prior_reviews = find_prior_reviews(
+        teammate_id=normalized_finding.get("teammate_id"),
+        finding_type=normalized_finding.get("finding_type"),
+        metric=normalized_finding.get("metric"),
+        ledger_path=ledger_path,
+    )
+
+    # 4. Review — also uses the normalized finding (not raw, not re-derived)
     review_result = review_finding(
         normalized_finding,
         explanation=explanation,
         input_fn=input_fn,
         reviewer=reviewer,
+        prior_reviews=prior_reviews,
     )
 
-    # 4. Persist — append to ledger
+    # 5. Persist — append to ledger
     append_to_ledger(review_result, path=ledger_path)
 
     return review_result
+
+
+def find_prior_reviews(
+    teammate_id: str,
+    finding_type: str,
+    metric: Optional[str] = None,
+    ledger_path: str = "ledger.jsonl",
+) -> list[dict]:
+    """
+    Look up any prior ledger entries matching this teammate and finding.
+
+    For rule_breach findings, matches on teammate_id + finding_type + metric
+    (since the same teammate can have multiple different metric breaches).
+    For anomaly findings, matches on teammate_id + finding_type alone.
+
+    This does NOT skip or auto-resolve the review — it only surfaces prior
+    history as context for the human reviewer, who still makes a fresh
+    decision every time. This is a deliberate design choice: automatically
+    reapplying a past decision would remove the human judgement step this
+    thesis's design otherwise treats as essential (Section 3.8.4), and risks
+    missing a genuine change in circumstance since the prior review.
+
+    Parameters
+    ----------
+    teammate_id : str
+    finding_type : str
+        'rule_breach' or 'anomaly'.
+    metric : Optional[str]
+        Required to match specifically for rule_breach findings; ignored
+        for anomaly findings.
+    ledger_path : str
+        Path to the JSON Lines ledger file.
+
+    Returns
+    -------
+    list[dict]
+        All matching prior entries, in the order they appear in the ledger
+        (oldest first). Empty list if none found or if the ledger does
+        not yet exist.
+    """
+    try:
+        entries = load_ledger(ledger_path)
+    except FileNotFoundError:
+        return []
+
+    matches = []
+    for entry in entries:
+        if entry.get("teammate_id") != teammate_id:
+            continue
+        if entry.get("finding_type") != finding_type:
+            continue
+        if finding_type == "rule_breach":
+            entry_metric = entry.get("finding_summary", {}).get("metric")
+            if entry_metric != metric:
+                continue
+        matches.append(entry)
+
+    return matches
 
 
 def append_to_ledger(record: dict, path: str = "ledger.jsonl") -> None:
