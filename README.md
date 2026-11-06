@@ -47,19 +47,21 @@ tests/       pytest suites for hitl/ components
 scripts/     Standalone evaluation scripts, run outside the main pipeline:
              explanation_layer_evaluation.py   — original-prompt 30-call evaluation
              two_part_prompt_evaluation.py     — two-part-prompt 30-call evaluation
-data/        Processed/derived data only — see note below
+data/        Not committed (private data) — see note below
 outputs/     Generated CSVs/figures (gitignored, regenerate by running notebooks)
 ```
 
 Notebooks 01–02 depend on each other in sequence: `01_...` exports
-`teammate_time_allocation_clusters.csv`, which `02_...` loads rather than
+`teammate_time_allocation_clusters.csv` (local, gitignored), which `02_...` loads rather than
 recomputing the baseline clustering. Run 01 before 02.
 
 ## Data note
 
-Only cleaned, derived, non-raw data is committed (`data/processed/`). Raw
-source files are **not** included here and are kept local only, under
-`data/raw/`, which is gitignored. `ledger.jsonl` and `quality_metrics.jsonl`
+No MinoriLabs data is committed here, raw or processed. The KPI export and
+everything derived from it (cleaned tables, cluster assignments) stay local:
+`data/raw/` and `data/processed/` are gitignored, and the notebooks are saved
+without outputs. To run them, place the raw export under `data/raw/` as
+described below. `ledger.jsonl` and `quality_metrics.jsonl`
 (runtime artifacts of the HITL system) are likewise gitignored, as they are
 regenerable rather than source data. External ground-truth data used for
 validation (notebook 04) is cloned fresh at runtime from its own public

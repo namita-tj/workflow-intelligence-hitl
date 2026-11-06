@@ -1,6 +1,6 @@
 data/raw/
 *.xlsx
-!data/processed/*.csv
+data/processed/
 outputs/*
 !outputs/.gitkeep
 __pycache__/
@@ -15,4 +15,4 @@ venv/
 ledger.jsonl
 quality_metrics.jsonl
 notebooks/truck-factor-ML-public/
-notebooks/task_level_with_text_clusters.csv
+notebooks/*.csv
