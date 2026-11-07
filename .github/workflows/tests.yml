@@ -34,3 +34,7 @@ jobs:
       - name: Run test suite with coverage
         run: |
           pytest tests/ -v --cov=hitl --cov-report=term-missing
+
+      - name: Run the synthetic demo end to end
+        run: |
+          python demo/run_demo.py

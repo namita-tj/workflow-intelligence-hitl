@@ -55,6 +55,51 @@ def fallback_explanation(finding: dict) -> str:
 # 2. Shape normalizer — handle both detector schemas
 # ============================================================================
 
+SUPPORTED_FINDING_TYPES = ("rule_breach", "anomaly")
+
+# Every key a supported finding may carry. normalize_finding() fills all of them
+# (unused ones as None), and rule_based_detector adds "breached".
+_KNOWN_KEYS = {
+    "finding_type", "teammate_id", "metric", "value", "benchmark",
+    "breached", "cluster_label", "is_noise",
+}
+_REQUIRED = {
+    "rule_breach": ("teammate_id", "metric", "value", "benchmark"),
+    "anomaly": ("teammate_id", "cluster_label", "is_noise"),
+}
+
+
+class UnsupportedFindingError(ValueError):
+    """A finding the HITL pipeline has no schema for.
+
+    Raised instead of guessing. In the thesis (Section 4.2.5), a personal-baseline
+    deviation (a teammate compared with their own history, not a team benchmark)
+    was passed through the pipeline and silently misclassified as a rule breach,
+    losing information while the output still looked valid. A finding that does
+    not fit one of the supported schemas exactly is now rejected with a clear
+    message, so nothing reaches the reviewer in a distorted form.
+
+    Subclasses ValueError, so existing callers that catch ValueError still work.
+    """
+
+
+def _check_supported(finding: dict, finding_type: str) -> None:
+    unknown = sorted(set(finding) - _KNOWN_KEYS)
+    if unknown:
+        raise UnsupportedFindingError(
+            f"Finding for {finding.get('teammate_id')!r} has fields this pipeline does not "
+            f"support: {unknown}. Supported finding types are {SUPPORTED_FINDING_TYPES}; "
+            f"other types (e.g. a deviation from a teammate's own baseline) need their own "
+            f"schema (see thesis Section 4.2.5)."
+        )
+    missing = [k for k in _REQUIRED[finding_type] if finding.get(k) is None]
+    if missing:
+        raise UnsupportedFindingError(
+            f"{finding_type} finding for {finding.get('teammate_id')!r} is missing required "
+            f"field(s) {missing}; refusing to guess them."
+        )
+
+
 def normalize_finding(raw_finding: dict) -> dict:
     """
     Convert either detector's raw output to a common internal finding format.
@@ -66,8 +111,20 @@ def normalize_finding(raw_finding: dict) -> dict:
     an already-normalized anomaly finding misclassified it as rule_breach
     because the 'metric' key was present (set to None) even though anomaly
     findings don't use it.
+
+    Strict: a finding with an unknown finding_type, fields outside the
+    supported schemas, or a missing required field raises
+    UnsupportedFindingError instead of being squeezed into the nearest
+    schema (the silent failure documented in thesis Section 4.2.5).
     """
-    if raw_finding.get("finding_type") in ("rule_breach", "anomaly"):
+    declared = raw_finding.get("finding_type")
+    if declared is not None and declared not in SUPPORTED_FINDING_TYPES:
+        raise UnsupportedFindingError(
+            f"Unsupported finding_type {declared!r} for {raw_finding.get('teammate_id')!r}; "
+            f"supported types are {SUPPORTED_FINDING_TYPES} (see thesis Section 4.2.5)."
+        )
+    if declared in SUPPORTED_FINDING_TYPES:
+        _check_supported(raw_finding, declared)
         return dict(raw_finding)  # shallow copy, don't mutate caller's dict
 
     normalized = {
@@ -77,17 +134,19 @@ def normalize_finding(raw_finding: dict) -> dict:
     }
 
     if "metric" in raw_finding:
-        normalized["finding_type"] = "rule_breach"
+        finding_type = "rule_breach"
         normalized["metric"] = raw_finding.get("metric")
         normalized["value"] = raw_finding.get("value")
         normalized["benchmark"] = raw_finding.get("benchmark")
     elif "cluster_label" in raw_finding:
-        normalized["finding_type"] = "anomaly"
+        finding_type = "anomaly"
         normalized["cluster_label"] = raw_finding.get("cluster_label")
         normalized["is_noise"] = raw_finding.get("is_noise")
     else:
-        raise ValueError(f"Unrecognized finding schema: {raw_finding}")
+        raise UnsupportedFindingError(f"Unrecognized finding schema: {raw_finding}")
 
+    _check_supported(raw_finding, finding_type)
+    normalized["finding_type"] = finding_type
     return normalized
 
 # ============================================================================
@@ -241,7 +300,9 @@ def call_llm(prompt: str, backend: str = "ollama", **kwargs) -> Optional[str]:
     prompt : str
         The prompt to send.
     backend : str
-        "ollama" (local, recommended) or "google_ai" (synthetic data only).
+        "ollama" (local, recommended), "google_ai" (synthetic data only), or
+        "none" (no model; the caller falls back to the template explanation,
+        used by the demo so it runs without Ollama).
     **kwargs
         Additional arguments (e.g., model="mistral", api_key="...").
 
@@ -250,6 +311,8 @@ def call_llm(prompt: str, backend: str = "ollama", **kwargs) -> Optional[str]:
     Optional[str]
         The model's response text, or None if the call fails.
     """
+    if backend == "none":
+        return None  # no language model: explain_finding() uses the deterministic template
     if backend == "ollama":
         return _call_ollama(prompt, model=kwargs.get("model", "mistral"))
     elif backend == "google_ai":
@@ -262,12 +325,49 @@ def call_llm(prompt: str, backend: str = "ollama", **kwargs) -> Optional[str]:
 # 5. Validator — check LLM response quality
 # ============================================================================
 
+# Plain-language ways a correct explanation may refer to each metric. Thesis
+# Section 4.2.4: exact keyword matching rejected a correct response that described
+# Idle Rate as "spending time without active tasks assigned". Each pattern names
+# the same concept as its metric and none is shared between metrics, so accepting
+# them does not let an explanation about the wrong metric through.
+METRIC_PARAPHRASES = {
+    "Idle Rate": [r"\bidle\b", r"\bidling\b", r"without (any )?(active |assigned )?tasks?",
+                  r"no (active |assigned )?tasks?", r"\bunassigned (time|hours)\b",
+                  r"\bdowntime\b", r"\bnot (actively )?assigned\b"],
+    "Rework Rate": [r"\brework", r"\bre-work", r"\bredo(ne|ing)?\b", r"\bre-do",
+                    r"\bcorrections?\b", r"\brevisions?\b", r"\bfix(es|ing)? (its|their|own|previous) work\b"],
+    "Meeting Overhead Ratio": [r"\bmeetings?\b", r"\bcoordination (time|overhead)\b", r"\bcalls with\b"],
+    "ETA Achievement": [r"\beta\b", r"\bdeadlines?\b", r"\bon[- ]time\b", r"\bdue dates?\b",
+                        r"\bestimated (completion|delivery) (time|date)s?\b", r"\blate deliver"],
+    "Effective Utilisation": [r"\butili[sz]ation\b", r"\butili[sz]ed\b", r"\bproductive (time|hours)\b",
+                              r"\bbillable (time|hours)\b"],
+}
+
+
+def metric_match(llm_response: str, metric: Optional[str]) -> Optional[str]:
+    """How a response refers to a metric: "exact" (the metric's name), "paraphrase"
+    (one of METRIC_PARAPHRASES), or None if it does not refer to it at all."""
+    if not metric or not llm_response:
+        return None
+    text = llm_response.lower()
+    if metric.lower() in text:
+        return "exact"
+    if any(re.search(p, text) for p in METRIC_PARAPHRASES.get(metric, [])):
+        return "paraphrase"
+    return None
+
+
 def validate_response(
     llm_response: str,
     normalized_finding: dict,
 ) -> bool:
     """
-    Validate that the LLM response actually mentions the real metric/value.
+    Validate that the LLM response actually refers to the real metric.
+
+    A rule-breach explanation passes if it names the metric, or describes it
+    in one of the plain-language forms in METRIC_PARAPHRASES (thesis Section
+    4.2.4: "time without active tasks" is a correct way to explain Idle Rate,
+    and used to be rejected). Use metric_match() to see which of the two it was.
 
     KNOWN LIMITATION (observed 2026-08, live integration test against T-023):
     This only checks that the correct factual content is present — it does NOT
@@ -275,11 +375,8 @@ def validate_response(
     (avoiding firm conclusions/recommendations). A real Ollama/mistral call
     produced a factually accurate explanation that still ended with
     "it is important for the manager to investigate further" — a soft
-    recommendation the prompt explicitly instructed against. Tightening this
-    would require detecting recommendation-language patterns (e.g. "should",
-    "it is important that", "needs to"), which was judged out of scope given
-    the added complexity and false-positive risk against legitimate factual
-    statements. Documented here rather than silently patched.
+    recommendation the prompt explicitly instructed against. That is measured
+    separately (hitl.quality_metrics) and addressed by the two-part prompt.
 
     Parameters
     ----------
@@ -293,23 +390,23 @@ def validate_response(
     bool
         True if response passes validation, False otherwise.
     """
-    # Rule breach: must mention the metric
-    if normalized_finding.get("finding_type") == "rule_breach":
-        metric = normalized_finding.get("metric")
-        if metric and metric.lower() in llm_response.lower():
-            return True
+    if not llm_response:
         return False
+
+    # Rule breach: must refer to the metric, by name or by a known paraphrase
+    if normalized_finding.get("finding_type") == "rule_breach":
+        return metric_match(llm_response, normalized_finding.get("metric")) is not None
 
     # Anomaly: must mention "outlier", "anomal", "cluster", or teammate ID
     elif normalized_finding.get("finding_type") == "anomaly":
         teammate_id = normalized_finding.get("teammate_id")
         response_lower = llm_response.lower()
-        
+
         # Build keyword list, excluding empty strings to avoid matching everything
         keywords = ["outlier", "anomal", "cluster"]
         if teammate_id:
             keywords.append(teammate_id.lower())
-        
+
         if any(keyword in response_lower for keyword in keywords):
             return True
         return False
@@ -393,6 +490,10 @@ def explain_finding(
 __all__ = [
     "fallback_explanation",
     "normalize_finding",
+    "UnsupportedFindingError",
+    "SUPPORTED_FINDING_TYPES",
+    "metric_match",
+    "METRIC_PARAPHRASES",
     "build_prompt",
     "call_llm",
     "validate_response",
