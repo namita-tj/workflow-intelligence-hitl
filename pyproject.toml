@@ -5,11 +5,11 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "workflow-intelligence-hitl"
 version = "1.0.0"
-description = "HITL AI system for surfacing tribal operational intelligence from delivery workflow data"
+description = "A human-in-the-loop system for surfacing and validating tribal knowledge from organisational workflow data (bachelor's thesis)"
 readme = "README.md"
 license = { file = "LICENSE" }
 authors = [
-    { name = "Namita T J" }
+    { name = "Namita Thangavel Jeyaradha" }
 ]
 requires-python = ">=3.10"
 dependencies = [
@@ -26,8 +26,12 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
     "pytest",
+    "pytest-cov",
     "jupyter",
 ]
+
+[tool.setuptools]
+py-modules = ["main"]  # so the workflow-hitl command below can import main.py
 
 [tool.setuptools.packages.find]
 include = ["hitl*"]

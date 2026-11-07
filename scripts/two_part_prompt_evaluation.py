@@ -22,7 +22,11 @@ import re
 import json
 import statistics
 import sys
+from pathlib import Path
 from datetime import datetime, timezone
+
+# Make the repository root importable when run as `python scripts/<name>.py`
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from hitl.explanation_layer import normalize_finding, call_llm
 from hitl.two_part_prompt import build_two_part_prompt

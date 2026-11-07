@@ -118,7 +118,7 @@ def _display_finding(
     prior_reviews, if provided and non-empty, is shown as context above the
     current finding — the most recent prior decision, reviewer, and
     annotation. This informs the reviewer without automatically reapplying
-    a past decision; a fresh decision is always required (Section 3.8.4).
+    a past decision; a fresh decision is always required (Sections 3.3.4 and 3.5).
 
     co_occurring_teammates, if provided and non-empty, lists other teammates
     who breached the same metric in this run — surfaced so the reviewer can

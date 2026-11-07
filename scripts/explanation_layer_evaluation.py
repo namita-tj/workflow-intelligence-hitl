@@ -20,6 +20,12 @@ Usage: python explanation_layer_evaluation.py
 import time
 import re
 import statistics
+import sys
+from pathlib import Path
+
+# Make the repository root importable when run as `python scripts/<name>.py`
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 from hitl.explanation_layer import (
     normalize_finding, build_prompt, call_llm, validate_response,
     fallback_explanation, explain_finding,

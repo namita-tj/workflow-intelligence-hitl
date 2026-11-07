@@ -16,12 +16,16 @@ Usage: python scripts/check_parameter_drift.py --kpi-file <path>
 
 import argparse
 import sys
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans, DBSCAN
 from sklearn.metrics import silhouette_score
+
+# Make the repository root importable when run as `python scripts/<name>.py`
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from main import load_raw_task_data
 
