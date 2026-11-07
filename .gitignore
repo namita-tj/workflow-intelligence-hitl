@@ -16,3 +16,6 @@ ledger.jsonl
 quality_metrics.jsonl
 notebooks/truck-factor-ML-public/
 notebooks/*.csv
+.coverage
+build/
+*.egg-info/

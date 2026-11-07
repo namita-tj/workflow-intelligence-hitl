@@ -1,7 +1,7 @@
 """
 Quality metrics tracking for the explanation layer's LLM outputs.
 
-Extends the one-time 30-call soft-recommendation evaluation (Section 4.6)
+Extends the one-time 30-call soft-recommendation evaluation (Section 4.2.6)
 into an ongoing, per-call quality log, so recommendation-language rate and
 potential hallucinations can be tracked systematically over time, rather
 than only measured in a single evaluation script.
@@ -34,7 +34,7 @@ RECOMMENDATION_PATTERNS = [
 ]
 
 # Known metric names this system's rule-based detector actually checks
-# (Section 3.8.1 THRESHOLDS). Used only for the hallucination heuristic below.
+# (Section 3.3.1 and Appendix B, THRESHOLDS). Used only for the hallucination heuristic below.
 KNOWN_METRICS = [
     "ETA Achievement", "Rework Rate", "Meeting Overhead Ratio",
     "Idle Rate", "Effective Utilisation",

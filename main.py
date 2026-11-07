@@ -2,14 +2,14 @@
 main.py — End-to-end RQ2 HITL pipeline orchestrator.
 
 Runs the full detect -> explain -> review -> store flow described in
-Section 3.8, using real MinoriLabs Phase 1 KPI data.
+Section 3.3, using real MinoriLabs Phase 1 KPI data.
 
 This was the one genuinely missing piece: rule_based_detector and
 anomaly_detector each produce raw findings, but nothing previously
 chained "run the detectors on real data" together with
 ledger.process_finding() (which already correctly implements
 explain -> review -> store, per the normalization-bug fix documented
-in Section 3.9). This script is that missing first step, plus the
+in Section 4.2.8). This script is that missing first step, plus the
 top-level loop tying everything together.
 
 Requires:
@@ -47,7 +47,7 @@ FEATURE_COLUMNS = [
     "Avg Time Per Task (hrs)",
 ]
 
-# The exact 7 input ratio columns, matching Sections 3.2/3.3 and the
+# The exact 7 input ratio columns, matching Section 3.1 (Table 3.1) and the
 # cleaning logic originally developed in notebooks/00_KPI_Cleaning_Correlation.ipynb.
 INPUT_RATIO_COLUMNS = [
     "ETA Achievement", "Rework Rate", "Req. Understanding Ratio",
@@ -60,7 +60,7 @@ def clean_kpi_data(df_raw: pd.DataFrame, verbose: bool = True) -> pd.DataFrame:
     """
     Clean a raw MinoriLabs Phase 1 KPI Summary export, matching the exact
     cleaning steps originally developed and validated in
-    notebooks/00_KPI_Cleaning_Correlation.ipynb (Section 3.2).
+    notebooks/00_KPI_Cleaning_Correlation.ipynb (Section 3.1.2).
 
     This allows main.py to accept MinoriLabs' literal monthly export
     directly, rather than requiring a separately pre-cleaned file.
@@ -118,7 +118,7 @@ def clean_kpi_data(df_raw: pd.DataFrame, verbose: bool = True) -> pd.DataFrame:
 
 def load_kpi_data(path: str, sheet_name: str = "Phase 1 - KPI Summary", verbose: bool = True) -> pd.DataFrame:
     """Load a raw MinoriLabs Phase 1 KPI Summary export and clean it,
-    matching Section 3.2's documented cleaning steps exactly."""
+    matching Section 3.1.2's documented cleaning steps exactly."""
     df_raw = pd.read_excel(path, sheet_name=sheet_name)
     return clean_kpi_data(df_raw, verbose=verbose)
 
@@ -151,9 +151,9 @@ def run_rule_based_detection(df: pd.DataFrame) -> list:
 def run_anomaly_detection(raw_df: pd.DataFrame, eps: float = 4.0, min_samples: int = 3) -> list:
     """
     Run DBSCAN anomaly detection on the standardized behavioural feature
-    matrix, using the same parameters validated in Section 3.8.2.
+    matrix, using the same parameters validated in Section 3.3.2.
 
-    Matches the exact methodology in Sections 3.4/3.5 and
+    Matches the exact methodology in Sections 3.2.1/3.2.2 and
     notebooks/01_EDA_and_Baseline_Clustering.ipynb: clusters on the
     10-category TASK-ALLOCATION percentage matrix (built from the Raw
     Data sheet's Task Category / Month Total (hrs) columns), NOT the
@@ -163,9 +163,9 @@ def run_anomaly_detection(raw_df: pd.DataFrame, eps: float = 4.0, min_samples: i
     directly against the Raw Data pivot's own row sums - NOT by
     cross-referencing the KPI Summary sheet's cleaned active list. This
     matters specifically because of a known, documented case (Section
-    3.2): T-004 shows zero "Total Billable Hrs" in the KPI Summary sheet,
+    3.1.2): T-004 shows zero "Total Billable Hrs" in the KPI Summary sheet,
     but has real logged hours in Raw Data under a miscategorized "Others"
-    task category. Section 3.4 confirms only T-001 is excluded from
+    task category. Section 3.1.2 confirms only T-001 is excluded from
     clustering ("leaving 22 teammates"), not T-004 - so exclusion must be
     based on the Raw Data pivot's own totals, matching that documented
     22-teammate count, not on KPI Summary's separate cleaning logic.
@@ -175,7 +175,7 @@ def run_anomaly_detection(raw_df: pd.DataFrame, eps: float = 4.0, min_samples: i
     raw_df : pd.DataFrame
         The "Raw Data" sheet (task-level rows).
     eps, min_samples : float, int
-        DBSCAN parameters, as validated in Section 3.8.2.
+        DBSCAN parameters, as validated in Section 3.3.2.
 
     Returns
     -------
@@ -208,16 +208,16 @@ def run_anomaly_detection(raw_df: pd.DataFrame, eps: float = 4.0, min_samples: i
 def run_kmeans_candidate_detection(raw_df: pd.DataFrame, k: int = 3) -> dict:
     """
     Run K-means clustering to identify individual-level candidates, matching
-    the exact methodology in Sections 3.4/4.2: cluster on the same
+    the exact methodology in Sections 3.2.1/4.1.2: cluster on the same
     10-category task-allocation percentage matrix used for DBSCAN, then
     identify the smallest cluster(s) as candidates for review.
 
     IMPORTANT - this is informational output only, and is deliberately NOT
     routed through explain_finding()/review_finding()/the ledger. Doing so
-    would require a genuinely new finding-type schema, which Section 3.9's
-    schema stress test found breaks the existing pipeline silently, and
+    would require a genuinely new finding-type schema, which Section 4.2.5's
+    unsupported-finding-type test found breaks the existing pipeline silently, and
     which this thesis explicitly documents as a deliberate scope boundary
-    (Section 3.10.4) rather than an oversight. This function surfaces
+    (Section 3.5) rather than an oversight. This function surfaces
     K-means candidates for the user to see and consider separately, without
     reversing that stated design decision.
 
@@ -227,8 +227,8 @@ def run_kmeans_candidate_detection(raw_df: pd.DataFrame, k: int = 3) -> dict:
         The "Raw Data" sheet (task-level rows).
     k : int
         Number of clusters. Defaults to 3, the validated choice
-        (Section 3.5); a different value should only be used after
-        reviewing fresh diagnostics (see check_parameter_drift.py).
+        (Section 3.2.1); a different value should only be used after
+        reviewing fresh diagnostics (see scripts/check_parameter_drift.py).
 
     Returns
     -------
@@ -310,7 +310,7 @@ def main():
         if not args.skip_kmeans:
             kmeans_result = run_kmeans_candidate_detection(raw_df)
             print(f"\nK-means candidate detection (informational only - NOT sent for "
-                  f"review; see Section 3.10.4 on this deliberate scope boundary):")
+                  f"review; see Section 3.5 on this deliberate scope boundary):")
             print(f"  Cluster sizes: {kmeans_result['cluster_sizes']}")
             print(f"  Smallest cluster ({kmeans_result['smallest_cluster_label']}) "
                   f"candidates: {kmeans_result['candidates']}")

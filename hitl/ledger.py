@@ -118,7 +118,7 @@ def find_prior_reviews(
     history as context for the human reviewer, who still makes a fresh
     decision every time. This is a deliberate design choice: automatically
     reapplying a past decision would remove the human judgement step this
-    thesis's design otherwise treats as essential (Section 3.8.4), and risks
+    thesis's design otherwise treats as essential (Sections 3.3.4 and 3.5), and risks
     missing a genuine change in circumstance since the prior review.
 
     Parameters
