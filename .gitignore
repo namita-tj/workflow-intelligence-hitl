@@ -19,3 +19,4 @@ notebooks/*.csv
 .coverage
 build/
 *.egg-info/
+demo/demo_ledger.jsonl

@@ -13,6 +13,7 @@ import json
 from datetime import datetime, timezone
 from typing import Optional
 
+from hitl.agreement import conflicting_prior
 from hitl.explanation_layer import normalize_finding, explain_finding
 from hitl.review import review_finding
 
@@ -27,6 +28,7 @@ def process_finding(
     prompt_style: str = "original",
     metrics_path: Optional[str] = None,
     co_occurring_teammates: Optional[list] = None,
+    blind: bool = False,
 ) -> dict:
     """
     Complete HITL pipeline: normalize once, explain, review, persist to ledger.
@@ -52,6 +54,11 @@ def process_finding(
     prompt_style : str
         "original" (default, fully covered by this thesis's RQ2 test suite)
         or "two_part" (experimental alternative — see explain_finding()).
+    blind : bool
+        If True, prior reviews are NOT shown to the reviewer, so several
+        reviewers can judge the same findings independently (needed for a
+        meaningful agreement measure, see hitl.agreement). Disagreement with
+        earlier reviews is still detected and recorded afterwards.
 
     Returns
     -------
@@ -76,8 +83,8 @@ def process_finding(
     )
 
     # 3. Look up prior reviews of this exact finding, if any — shown to the
-    #    reviewer as context (Section on recurring findings), never used to
-    #    skip or auto-resolve the review itself.
+    #    reviewer as context (unless blind), never used to skip or
+    #    auto-resolve the review itself.
     prior_reviews = find_prior_reviews(
         teammate_id=normalized_finding.get("teammate_id"),
         finding_type=normalized_finding.get("finding_type"),
@@ -91,11 +98,25 @@ def process_finding(
         explanation=explanation,
         input_fn=input_fn,
         reviewer=reviewer,
-        prior_reviews=prior_reviews,
+        prior_reviews=None if blind else prior_reviews,
         co_occurring_teammates=co_occurring_teammates,
     )
 
-    # 5. Persist — append to ledger
+    # 5. Flag disagreement with earlier reviews of the same finding. Nothing is
+    #    overridden: both decisions stay in the ledger, the conflict is recorded
+    #    and shown, so it can be discussed rather than silently kept.
+    conflicts = conflicting_prior(review_result["decision"], prior_reviews)
+    review_result["disagrees_with"] = [
+        {"reviewer": p.get("reviewer"), "decision": p.get("decision"), "timestamp": p.get("timestamp")}
+        for p in conflicts
+    ]
+    if conflicts:
+        names = ", ".join(sorted({str(p.get("reviewer")) for p in conflicts}))
+        print(f"NOTE: this decision ({review_result['decision']}) disagrees with "
+              f"{len(conflicts)} earlier review(s) of the same finding by {names}. "
+              f"Both are kept in the ledger; see scripts/review_agreement.py.")
+
+    # 6. Persist — append to ledger
     append_to_ledger(review_result, path=ledger_path)
 
     return review_result
@@ -210,4 +231,4 @@ def load_ledger(path: str = "ledger.jsonl") -> list[dict]:
         return []
 
 
-__all__ = ["process_finding", "append_to_ledger", "load_ledger"]
+__all__ = ["process_finding", "find_prior_reviews", "append_to_ledger", "load_ledger"]

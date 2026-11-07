@@ -24,6 +24,8 @@ Usage:
     python main.py --prompt-style two_part
     python main.py --limit 3            # only process the first 3 findings
     python main.py --reviewer "Namita"  # skip the reviewer-name prompt
+    python main.py --blind-review       # hide earlier reviews (independent reviewers)
+    python main.py --kpi-file demo/demo_kpi_export.xlsx --backend none   # demo data, no Ollama
 """
 
 import argparse
@@ -265,7 +267,7 @@ def run_kmeans_candidate_detection(raw_df: pd.DataFrame, k: int = 3) -> dict:
     }
 
 
-def main():
+def main(argv=None):
     parser = argparse.ArgumentParser(description="Run the full RQ2 HITL pipeline end-to-end.")
     parser.add_argument("--kpi-file", default=KPI_FILE_PATH, help="Path to the KPI Excel file.")
     parser.add_argument("--kpi-sheet-name", default="Phase 1 - KPI Summary",
@@ -282,9 +284,15 @@ def main():
     parser.add_argument("--skip-kmeans", action="store_true",
                          help="Skip K-means candidate detection (informational only).")
     parser.add_argument("--skip-rule-based", action="store_true", help="Skip rule-based detection.")
+    parser.add_argument("--backend", default="ollama", choices=["ollama", "none"],
+                         help="Explanation backend: local Ollama, or 'none' for the deterministic "
+                              "template explanation (no model needed, e.g. for the demo).")
+    parser.add_argument("--blind-review", action="store_true",
+                         help="Do not show earlier reviews of the same finding, so several reviewers "
+                              "can review independently (see scripts/review_agreement.py).")
     parser.add_argument("--metrics-path", default="quality_metrics.jsonl",
                          help="Path to log LLM response quality metrics (recommendation language, potential hallucination).")
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
 
     print(f"Loading KPI data from: {args.kpi_file}")
     try:
@@ -319,7 +327,8 @@ def main():
         all_findings = all_findings[:args.limit]
 
     print(f"\nTotal findings to process: {len(all_findings)}")
-    print(f"Prompt style: {args.prompt_style}")
+    print(f"Prompt style: {args.prompt_style} | backend: {args.backend}"
+          f"{' | blind review' if args.blind_review else ''}")
     print(f"Ledger output: {args.ledger_path}\n")
 
     if not all_findings:
@@ -349,12 +358,13 @@ def main():
         try:
             result = process_finding(
                 finding,
-                backend="ollama",
+                backend=args.backend,
                 reviewer=args.reviewer,
                 ledger_path=args.ledger_path,
                 prompt_style=args.prompt_style,
                 metrics_path=args.metrics_path,
                 co_occurring_teammates=co_occurring,
+                blind=args.blind_review,
             )
             results.append(result)
             print(f"-> Decision: {result['decision']}")
